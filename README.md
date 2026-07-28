@@ -110,7 +110,8 @@ Werkzeug-hashed passwords — no external identity provider required. This is
 meant for local/demo use; swap in a real database and session store before
 deploying multi-user in production.
 
-## Notes
+## Deployment
+https://alarm-poker-frustrate.ngrok-free.dev
 
 - Cleaned data is cached per-session as a pickle file in `data/` — no
   database is required for this version. For multi-user production
