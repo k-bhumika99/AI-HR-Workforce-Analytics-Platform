@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}AI HR Insights{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>✨ AI HR Insights</h1>
+    <p class="page-subtitle">Powered by Google Gemini 2.5 Flash-Lite — generated from calculated statistics only, no raw employee data is sent.</p>
+  </div>
+</div>
+
+<section class="module-section">
+  <h2>📊 Statistics Sent to Gemini</h2>
+  <div class="stat-row">
+    {% for key, value in summary.items() %}
+      <div class="stat-pill">{{ key.replace('_', ' ').title() }}: <strong>{{ value }}</strong></div>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="module-section">
+  <form method="post" action="{{ url_for('ai_insights') }}">
+    <button type="submit" class="btn btn-primary btn-large">
+      {% if insights %}🔁 Regenerate Insights{% else %}✨ Generate AI HR Insights{% endif %}
+    </button>
+  </form>
+</section>
+
+{% if insights %}
+  {% if insights.error %}
+    <div class="flash flash-error">⚠️ {{ insights.error }}</div>
+  {% else %}
+
+    {% if insights.executive_summary %}
+    <section class="exec-summary-card">
+      <span class="exec-emoji">{{ insights.executive_emoji or "📋" }}</span>
+      <p>{{ insights.executive_summary }}</p>
+    </section>
+    {% endif %}
+
+    <div class="insight-card-grid">
+      {% for section in insights.sections %}
+      <div class="insight-card">
+        <div class="insight-card-header">
+          <span class="insight-emoji">{{ section.emoji }}</span>
+          <h3>{{ section.title }}</h3>
+        </div>
+        <ul class="insight-points">
+          {% for point in section.points %}
+          <li>{{ point }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="module-section" style="margin-top: 24px;">
+      <a href="{{ url_for('export_page') }}" class="btn btn-ghost">📤 Export this report</a>
+    </div>
+
+  {% endif %}
+{% endif %}
+
+{% endblock %}

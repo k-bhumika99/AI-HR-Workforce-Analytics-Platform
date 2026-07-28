@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}AI HR Workforce Analytics{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body class="public-body">
+
+<header class="topbar public-topbar">
+  <a href="{{ url_for('landing') }}" class="topbar-left">
+    <span class="logo-mark">👥</span>
+    <span class="app-title">Workforce Analytics</span>
+  </a>
+  <div class="topbar-right">
+    {% if session.get('user') %}
+      <a href="{{ url_for('home') }}" class="btn btn-ghost btn-small">🏠 Go to App</a>
+      <a href="{{ url_for('logout') }}" class="btn btn-ghost btn-small">🚪 Logout</a>
+    {% else %}
+      <a href="{{ url_for('login') }}" class="btn btn-ghost btn-small">🔑 Sign In</a>
+      <a href="{{ url_for('signup') }}" class="btn btn-primary btn-small">✨ Sign Up Free</a>
+    {% endif %}
+  </div>
+</header>
+
+<main class="public-content">
+  {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+      <div class="flash-stack public-flash-stack">
+      {% for category, message in messages %}
+        <div class="flash flash-{{ category }}">{{ message }}</div>
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+
+  {% block content %}{% endblock %}
+</main>
+
+<footer class="public-footer">
+  <p>👥 Workforce Analytics &middot; Built with Flask &amp; pure Pandas analytics, with optional Gemini AI insights &middot; Historical data only, no predictions.</p>
+</footer>
+
+{% block scripts %}{% endblock %}
+</body>
+</html>

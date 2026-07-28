@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Training — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>🎓 Training Participation Analysis</h1>
+    <p class="page-subtitle">Training hours by department and how they relate to experience</p>
+  </div>
+</div>
+
+{% include "partials/filter_bar.html" %}
+
+<div class="stat-row">
+  <div class="stat-pill">🎓 Average Training Hours: <strong>{{ training.get('average_training_hours', 'N/A') }}</strong></div>
+</div>
+
+<section class="module-section">
+  <h2>🏢 Training by Department &amp; Experience</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-training_bar"></div>
+    <div class="chart-card" id="chart-training_scatter"></div>
+  </div>
+</section>
+
+{% if training.employees_highest_training %}
+<section class="module-section">
+  <h2>🏆 Most-Trained Employees</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          {% for col in training.employees_highest_training[0].keys() %}<th>{{ col }}</th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in training.employees_highest_training %}
+        <tr>
+          {% for col, val in row.items() %}<td>{{ val }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script type="application/json" id="charts-data">
+{
+  {% set comma = joiner(",") %}
+  {% for key, json_str in charts.items() %}
+    {% if json_str %}
+      {{ comma() }}
+      "{{ key }}": {{ json_str | safe }}
+    {% endif %}
+  {% endfor %}
+}
+</script>
+<script>
+const chartsDataEl = document.getElementById("charts-data");
+if (chartsDataEl) {
+  const CHARTS = JSON.parse(chartsDataEl.textContent);
+  Object.keys(CHARTS).forEach(function(key) {
+    const el = document.getElementById("chart-" + key);
+    if (el) Plotly.newPlot(el, CHARTS[key].data, CHARTS[key].layout, {responsive: true, displaylogo: false});
+  });
+}
+</script>
+{% endblock %}

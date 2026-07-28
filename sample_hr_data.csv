@@ -1,0 +1,503 @@
+EmployeeID,Name,Gender,Age,Department,JobRole,Experience,Salary,Attendance,PerformanceRating,Promoted,TrainingHours,Attrition,JoiningDate
+EMP1000,Employee 1,Male,37,Finance,Lead,1,178240,89.8,3.0,No,76,No,2017-10-30
+EMP1001,Employee 2,Female,29,Marketing,Associate,13,95119,77.6,5.0,No,53,No,2022-02-02
+EMP1002,Employee 3,Female,53,Marketing,Senior Manager,3,63714,76.6,3.0,No,35,No,2020-08-02
+EMP1003,Employee 4,Female,40,Operations,Senior Manager,15,80419,84.7,3.0,No,0,No,2022-09-04
+EMP1004,Employee 5,Male,33,Operations,Manager,20,130432,92.1,5.0,No,14,No,2015-10-01
+EMP1005,Employee 6,Male,48, sales ,Manager,19,117949,85.8,5.0,No,76,No,2017-08-13
+EMP1006,Employee 7,Male,49, sales ,Senior Manager,13,158533,71.0,4.0,No,16,No,2022-04-01
+EMP1007,Employee 8,Female,33, sales ,Associate,14,170363,96.1,4.0,No,23,No,2019-11-15
+EMP1008,Employee 9,Female,55, sales ,Senior Manager,2,101971,71.9,3.0,No,57,No,2016-01-16
+EMP1009,Employee 10,Female,26,HR,Associate,7,118471,98.7,3.0,No,71,Yes,2018-09-14
+EMP1010,Employee 11,Male,38,Finance,Manager,15,89946,70.8,1.0,No,22,No,2016-04-23
+EMP1011,Employee 12,Female,25,Engineering,Executive,9,123989,90.8,1.0,No,45,No,2020-08-24
+EMP1012,Employee 13,Female,45,Operations,Lead,3,109080,72.5,4.0,Yes,71,Yes,2016-05-30
+EMP1013,Employee 14,Male,22,Finance,Manager,17,102794,97.3,4.0,No,7,Yes,2015-07-10
+EMP1014,Employee 15,Male,30,Sales,Manager,1,55841,83.9,1.0,No,58,No,2018-04-06
+EMP1015,Employee 16,Male,50,Engineering,Senior Executive,16,-5000,74.1,1.0,No,58,No,2024-11-01
+EMP1016,Employee 17,Male,25,Operations,Senior Executive,12,145029,150.0,2.0,No,12,No,2022-04-22
+EMP1017,Employee 18,Male,53,HR,Senior Executive,3,101272,74.9,2.0,No,38,No,2018-03-06
+EMP1018,Employee 19,Male,21,Operations,Lead,24,62643,75.1,1.0,Yes,27,No,2021-01-10
+EMP1019,Employee 20,Male,38,IT,Senior Executive,10,68950,98.4,2.0,No,60,No,2018-11-12
+EMP1020,Employee 21,Female,52,Sales,Associate,6,125500,83.4,5.0,No,15,No,2023-12-25
+EMP1021,Employee 22,Male,31,Engineering,Senior Manager,11,150588,93.7,4.0,No,1,No,2015-09-29
+EMP1022,Employee 23,Male,41,HR,Executive,9,40997,89.2,4.0,No,16,No,2015-05-23
+EMP1023,Employee 24,Male,46,Sales,Manager,6,104751,90.3,1.0,No,29,No,2025-01-30
+EMP1024,Employee 25,Male,45,Operations,Associate,12,123605,74.0,3.0,No,12,No,2020-03-27
+EMP1025,Employee 26,Female,42,Sales,Executive,6,179983,77.0,1.0,No,12,Yes,2017-12-28
+EMP1026,Employee 27,Male,47,Engineering,Associate,23,80533,93.6,2.0,Yes,42,No,2021-04-13
+EMP1027,Employee 28,Male,33,Marketing,Associate,16,107566,99.1,3.0,No,20,Yes,2024-02-15
+EMP1028,Employee 29,Female,53,Sales,Manager,9,170643,77.9,2.0,No,54,No,2017-02-26
+EMP1029,Employee 30,Male,54,IT,Senior Manager,9,133255,78.1,5.0,No,39,Yes,2020-10-27
+EMP1030,Employee 31,Female,55,Sales,Senior Executive,23,83005,84.2,,No,14,Yes,2019-08-09
+EMP1031,Employee 32,Male,21,Operations,Lead,3,68541,99.5,,No,72,No,2016-09-14
+EMP1032,Employee 33,Male,41,Operations,Senior Manager,19,48387,78.1,,Yes,51,No,2025-01-24
+EMP1033,Employee 34,Female,26,HR,Lead,3,118980,82.2,,No,73,No,2022-01-16
+EMP1034,Employee 35,Female,48,Operations,Manager,21,110457,96.7,2.0,No,52,Yes,2022-09-20
+EMP1035,Employee 36,Female,37,Finance,Manager,6,169129,70.1,5.0,No,51,Yes,2017-07-26
+EMP1036,Employee 37,Male,25,Engineering,Manager,21,89028,71.2,3.0,Yes,29,No,2025-02-09
+EMP1037,Employee 38,Male,51,Engineering,Executive,0,144246,88.1,5.0,Yes,32,Yes,2024-04-24
+EMP1038,Employee 39,Female,25,Marketing,Lead,11,80731,97.2,4.0,No,56,Yes,2023-12-05
+EMP1039,Employee 40,Male,58,Marketing,Senior Manager,23,69638,77.2,5.0,No,51,No,2018-01-23
+EMP1040,Employee 41,Male,23,Engineering,Senior Manager,12,45567,84.1,3.0,Yes,8,No,2016-09-08
+EMP1041,Employee 42,Male,43,IT,Associate,9,82804,83.5,4.0,No,53,No,2017-10-28
+EMP1042,Employee 43,Male,57,Marketing,Associate,14,133821,84.2,1.0,No,0,No,2015-03-08
+EMP1043,Employee 44,Female,57,HR,Associate,12,28754,88.7,1.0,Yes,43,No,2024-10-07
+EMP1044,Employee 45,Male,30,Operations,Manager,22,52044,84.1,3.0,No,74,No,2015-07-10
+EMP1045,Employee 46,Female,30,Engineering,Senior Manager,21,92260,83.4,5.0,No,79,No,2024-05-30
+EMP1046,Employee 47,Male,39,Marketing,Lead,21,91912,84.2,2.0,No,8,No,2022-09-16
+EMP1047,Employee 48,Male,37,Engineering,Manager,20,33706,87.7,3.0,No,31,Yes,2016-06-04
+EMP1048,Employee 49,Male,41,Finance,Executive,21,33894,86.1,4.0,No,14,No,2017-09-16
+EMP1049,Employee 50,Male,34,Sales,Associate,8,174109,95.6,4.0,No,11,Yes,2018-02-14
+EMP1050,Employee 51,Female,29,Operations,Manager,8,108986,71.5,1.0,No,77,No,2021-05-03
+EMP1051,Employee 52,Female,21,Engineering,Manager,14,106942,95.0,4.0,No,56,No,2019-06-23
+EMP1052,Employee 53,Female,33,Sales,Executive,9,54725,95.3,3.0,Yes,7,No,2021-12-07
+EMP1053,Employee 54,Female,24,Marketing,Senior Executive,23,161998,78.5,4.0,No,71,No,2024-10-20
+EMP1054,Employee 55,Female,21,Sales,Senior Manager,24,129555,83.9,3.0,No,26,Yes,2024-03-23
+EMP1055,Employee 56,Female,52,Operations,Lead,9,34496,83.2,2.0,No,61,Yes,2018-04-02
+EMP1056,Employee 57,Male,54,Engineering,Senior Executive,7,81447,76.6,1.0,No,11,No,2016-01-11
+EMP1057,Employee 58,Male,48,Finance,Associate,23,126604,81.9,4.0,No,64,No,2016-10-14
+EMP1058,Employee 59,Male,51,IT,Manager,15,113199,71.3,3.0,Yes,41,No,2024-02-22
+EMP1059,Employee 60,Male,28,Marketing,Executive,16,66321,78.3,5.0,No,61,No,2016-07-02
+EMP1060,Employee 61,Male,46,Engineering,Executive,4,178728,94.5,1.0,No,10,No,2018-01-02
+EMP1061,Employee 62,Male,54,Operations,Senior Manager,3,80147,78.5,2.0,Yes,42,No,2024-10-19
+EMP1062,Employee 63,Female,23,Marketing,Senior Executive,17,116396,94.5,3.0,No,16,No,2015-03-14
+EMP1063,Employee 64,Male,32,HR,Senior Manager,23,63787,85.9,2.0,No,31,No,2021-06-13
+EMP1064,Employee 65,Male,21,Sales,Manager,18,46727,96.4,2.0,No,39,No,2015-07-18
+EMP1065,Employee 66,Male,25,IT,Senior Manager,3,120081,87.2,4.0,No,22,No,2023-10-07
+EMP1066,Employee 67,Male,50,Operations,Lead,6,147721,70.9,4.0,No,55,No,2019-11-17
+EMP1067,Employee 68,Female,50,HR,Executive,9,93056,90.3,3.0,No,5,No,2016-07-25
+EMP1068,Employee 69,Male,37,Engineering,Executive,24,159153,71.3,5.0,No,49,No,2017-03-01
+EMP1069,Employee 70,Female,43,Finance,Associate,17,105102,83.5,3.0,No,36,No,2019-06-27
+EMP1070,Employee 71,Female,35,Marketing,Associate,18,101865,97.9,5.0,Yes,63,Yes,2020-01-06
+EMP1071,Employee 72,Male,57,Sales,Manager,3,92695,75.0,2.0,No,53,No,2020-01-30
+EMP1072,Employee 73,Male,41,Marketing,Lead,9,142235,81.7,1.0,No,71,No,2019-02-19
+EMP1073,Employee 74,Female,34,IT,Senior Executive,0,133777,91.9,3.0,No,48,No,2018-03-20
+EMP1074,Employee 75,Female,22,Engineering,Senior Manager,22,44033,96.5,3.0,No,10,Yes,2025-03-29
+EMP1075,Employee 76,Female,31,Marketing,Manager,17,166877,90.1,5.0,No,48,No,2023-12-22
+EMP1076,Employee 77,Female,58,Sales,Associate,4,51832,77.7,2.0,No,20,No,2015-06-28
+EMP1077,Employee 78,Male,54,Engineering,Senior Manager,14,140725,90.2,2.0,No,65,Yes,2021-02-22
+EMP1078,Employee 79,Male,58,Marketing,Associate,16,170016,78.9,5.0,No,62,No,2017-01-04
+EMP1079,Employee 80,Male,54,Finance,Senior Manager,2,44873,91.6,2.0,Yes,27,No,2020-11-06
+EMP1080,Employee 81,Female,38,Operations,Senior Executive,11,65372,98.6,4.0,No,16,No,2017-03-09
+EMP1081,Employee 82,Female,50,Engineering,Manager,1,114464,91.6,1.0,No,5,No,2024-08-06
+EMP1082,Employee 83,Male,35,Operations,Senior Manager,0,171451,95.9,3.0,No,18,No,2017-02-26
+EMP1083,Employee 84,Male,47,Engineering,Lead,22,142322,70.1,1.0,No,55,No,2022-08-27
+EMP1084,Employee 85,Male,54,Finance,Executive,20,125082,91.5,3.0,No,27,No,2023-11-29
+EMP1085,Employee 86,Male,58,Operations,Lead,16,30110,94.9,4.0,No,65,No,2015-07-28
+EMP1086,Employee 87,Female,53,HR,Lead,21,37087,71.2,2.0,No,37,No,2016-05-07
+EMP1087,Employee 88,Female,44,Sales,Executive,15,179834,96.1,5.0,No,36,No,2023-10-07
+EMP1088,Employee 89,Female,35,HR,Lead,4,107617,77.7,4.0,No,67,No,2022-06-05
+EMP1089,Employee 90,Male,50,Marketing,Senior Manager,14,125483,90.0,1.0,No,48,No,2023-06-12
+EMP1090,Employee 91,Male,37,Finance,Senior Manager,2,34596,94.0,5.0,No,42,Yes,2019-07-16
+EMP1091,Employee 92,Female,25,HR,Senior Manager,6,132539,89.9,2.0,No,35,No,2022-12-28
+EMP1092,Employee 93,Female,49,Engineering,Executive,10,43313,72.8,4.0,No,57,No,2017-01-01
+EMP1093,Employee 94,Male,24,Marketing,Lead,9,138175,87.9,5.0,No,12,Yes,2018-02-03
+EMP1094,Employee 95,Female,30,Marketing,Executive,8,139914,86.5,4.0,No,51,No,2024-06-08
+EMP1095,Employee 96,Male,37,HR,Senior Manager,13,48705,97.0,4.0,No,57,Yes,2019-05-25
+EMP1096,Employee 97,Male,30,HR,Lead,12,98445,82.1,2.0,No,31,No,2025-05-06
+EMP1097,Employee 98,Male,37,Finance,Lead,24,128892,79.6,3.0,Yes,59,No,2022-07-08
+EMP1098,Employee 99,Male,40,Sales,Associate,24,27023,92.5,5.0,No,57,No,2023-09-06
+EMP1099,Employee 100,Male,44,HR,Associate,1,144654,82.4,2.0,No,55,Yes,2016-08-16
+EMP1100,Employee 101,Male,25,IT,Senior Executive,2,105073,89.4,4.0,Yes,27,Yes,2025-01-06
+EMP1101,Employee 102,Female,54,HR,Manager,6,117197,89.4,2.0,Yes,0,No,2023-01-12
+EMP1102,Employee 103,Male,26,Operations,Associate,20,89429,96.6,3.0,No,41,No,2022-12-09
+EMP1103,Employee 104,Male,22,Engineering,Executive,17,129195,88.0,5.0,Yes,47,No,2018-04-30
+EMP1104,Employee 105,Female,33,IT,Associate,2,58848,85.1,3.0,No,39,No,2015-11-21
+EMP1105,Employee 106,Male,31,IT,Senior Executive,9,171451,74.2,1.0,No,62,No,2017-09-05
+EMP1106,Employee 107,Male,43,Operations,Lead,21,52766,73.5,5.0,No,75,No,2019-10-16
+EMP1107,Employee 108,Female,36,Operations,Senior Executive,6,93099,74.6,3.0,No,71,No,2020-01-25
+EMP1108,Employee 109,Male,51,Marketing,Lead,8,94122,75.2,4.0,No,79,No,2023-03-23
+EMP1109,Employee 110,Male,31,Sales,Lead,16,172159,89.1,5.0,No,3,No,2019-01-30
+EMP1110,Employee 111,Male,36,Engineering,Manager,10,73868,92.2,5.0,No,37,No,2017-06-12
+EMP1111,Employee 112,Male,28,Finance,Associate,6,144119,85.9,2.0,No,26,Yes,2018-10-22
+EMP1112,Employee 113,Female,24,IT,Executive,23,179297,94.9,4.0,No,8,No,2024-04-12
+EMP1113,Employee 114,Female,24,Finance,Executive,13,120286,99.7,1.0,No,15,No,2015-05-24
+EMP1114,Employee 115,Female,45,HR,Senior Manager,18,31643,94.6,3.0,No,55,Yes,2016-01-19
+EMP1115,Employee 116,Female,23,HR,Lead,3,61727,90.8,2.0,No,75,Yes,2021-03-13
+EMP1116,Employee 117,Female,52,Finance,Executive,5,167077,86.0,3.0,Yes,30,No,2024-05-25
+EMP1117,Employee 118,Male,23,HR,Manager,9,134079,83.5,1.0,No,13,No,2021-06-29
+EMP1118,Employee 119,Female,47,Sales,Lead,6,90697,72.5,1.0,No,24,No,2023-06-14
+EMP1119,Employee 120,Male,49,Operations,Manager,12,41029,82.0,5.0,No,33,No,2015-08-05
+EMP1120,Employee 121,Female,52,HR,Executive,13,170298,97.3,1.0,Yes,66,No,2019-02-24
+EMP1121,Employee 122,Female,39,Marketing,Executive,3,134458,94.2,3.0,No,23,No,2023-03-18
+EMP1122,Employee 123,Male,41,HR,Senior Manager,7,135384,76.5,4.0,No,72,No,2024-11-27
+EMP1123,Employee 124,Male,25,Engineering,Executive,4,93926,84.0,4.0,No,25,No,2021-02-08
+EMP1124,Employee 125,Male,38,Sales,Lead,0,162069,94.5,5.0,No,19,No,2021-05-06
+EMP1125,Employee 126,Male,48,Engineering,Lead,3,80506,72.0,3.0,No,63,No,2023-03-12
+EMP1126,Employee 127,Female,42,Engineering,Lead,2,103229,81.6,3.0,No,9,No,2019-01-30
+EMP1127,Employee 128,Female,41,Marketing,Senior Manager,8,67092,95.6,1.0,No,66,No,2022-12-27
+EMP1128,Employee 129,Male,26,Sales,Senior Manager,7,87539,82.1,3.0,Yes,23,Yes,2019-06-24
+EMP1129,Employee 130,Male,21,Sales,Executive,0,177889,72.3,2.0,No,4,Yes,2024-10-30
+EMP1130,Employee 131,Male,25,Sales,Senior Executive,5,38428,86.3,1.0,No,66,No,2024-11-22
+EMP1131,Employee 132,Male,32,Sales,Senior Executive,8,166330,95.9,2.0,No,57,No,2021-11-19
+EMP1132,Employee 133,Male,46,Sales,Senior Manager,6,82775,87.7,5.0,No,26,No,2021-06-10
+EMP1133,Employee 134,Male,54,Marketing,Executive,3,30469,76.8,4.0,No,79,Yes,2018-03-13
+EMP1134,Employee 135,Female,34,HR,Senior Executive,12,53854,81.5,5.0,No,14,Yes,2015-04-21
+EMP1135,Employee 136,Male,46,Engineering,Executive,16,162328,83.5,4.0,No,34,No,2017-10-10
+EMP1136,Employee 137,Male,47,Sales,Executive,1,101256,87.4,5.0,No,75,No,2015-08-20
+EMP1137,Employee 138,Female,29,IT,Executive,4,124134,92.8,3.0,No,52,No,2019-09-11
+EMP1138,Employee 139,Male,46,HR,Associate,11,157723,73.0,2.0,No,43,No,2025-01-03
+EMP1139,Employee 140,Female,42,HR,Lead,20,109730,96.7,4.0,No,25,No,2025-05-21
+EMP1140,Employee 141,Female,50,Engineering,Executive,7,52386,70.4,1.0,No,46,No,2019-10-22
+EMP1141,Employee 142,Male,37,Marketing,Associate,5,172256,81.1,2.0,No,33,No,2025-01-11
+EMP1142,Employee 143,Male,46,Finance,Senior Manager,7,58787,70.8,1.0,No,49,No,2024-10-11
+EMP1143,Employee 144,Male,56,Finance,Senior Executive,17,46621,81.8,2.0,No,11,No,2022-03-27
+EMP1144,Employee 145,Male,21,HR,Lead,2,102984,85.8,2.0,No,3,No,2019-04-27
+EMP1145,Employee 146,Male,28,Operations,Senior Executive,21,59051,85.4,5.0,No,47,No,2018-07-20
+EMP1146,Employee 147,Female,55,Operations,Lead,11,74811,75.0,4.0,No,54,No,2025-05-02
+EMP1147,Employee 148,Male,35,Engineering,Senior Executive,2,55447,89.4,4.0,Yes,0,Yes,2021-01-29
+EMP1148,Employee 149,Male,42,Finance,Lead,21,153046,71.3,2.0,Yes,65,No,2017-08-30
+EMP1149,Employee 150,Male,34,HR,Senior Executive,5,109045,92.9,3.0,No,29,No,2017-10-27
+EMP1150,Employee 151,Female,46,Marketing,Senior Executive,1,141859,98.4,3.0,No,2,No,2023-11-01
+EMP1151,Employee 152,Male,48,Finance,Senior Executive,22,170544,80.2,1.0,No,20,No,2024-11-02
+EMP1152,Employee 153,Male,43,HR,Senior Executive,11,28471,85.5,1.0,No,48,No,2022-02-06
+EMP1153,Employee 154,Male,34,HR,Senior Manager,1,145312,81.4,5.0,No,61,Yes,2022-02-08
+EMP1154,Employee 155,Female,44,Sales,Executive,5,164401,70.2,2.0,No,37,No,2016-06-01
+EMP1155,Employee 156,Male,22,Marketing,Manager,16,71850,81.6,1.0,Yes,14,No,2017-07-02
+EMP1156,Employee 157,Female,46,Sales,Associate,2,79220,93.8,1.0,No,51,No,2021-03-12
+EMP1157,Employee 158,Female,34,Engineering,Manager,1,118808,87.9,2.0,No,78,No,2020-12-21
+EMP1158,Employee 159,Male,27,Sales,Manager,22,162469,73.0,5.0,Yes,45,No,2021-05-21
+EMP1159,Employee 160,Female,23,IT,Lead,19,78072,95.4,1.0,No,24,No,2023-10-03
+EMP1160,Employee 161,Male,43,Sales,Executive,7,108820,85.9,5.0,Yes,20,No,2020-04-28
+EMP1161,Employee 162,Female,38,IT,Lead,21,48284,95.3,4.0,Yes,4,No,2019-01-02
+EMP1162,Employee 163,Female,58,Finance,Executive,11,108369,87.4,5.0,No,69,No,2020-02-16
+EMP1163,Employee 164,Male,55,Operations,Executive,3,50122,86.8,3.0,Yes,46,No,2022-06-26
+EMP1164,Employee 165,Male,35,HR,Senior Executive,4,155349,73.2,3.0,No,67,No,2023-10-29
+EMP1165,Employee 166,Female,45,IT,Senior Manager,12,95553,75.0,5.0,No,17,No,2021-07-06
+EMP1166,Employee 167,Male,57,Marketing,Senior Executive,14,119788,99.2,3.0,No,20,No,2024-11-18
+EMP1167,Employee 168,Male,48,Sales,Senior Manager,24,87812,76.9,4.0,No,22,No,2024-06-16
+EMP1168,Employee 169,Male,30,IT,Lead,22,32999,99.3,2.0,No,63,No,2023-09-22
+EMP1169,Employee 170,Female,37,Marketing,Senior Manager,15,47436,86.0,3.0,No,66,No,2023-01-20
+EMP1170,Employee 171,Female,42,Operations,Lead,9,67963,74.1,3.0,No,39,No,2024-09-23
+EMP1171,Employee 172,Male,46,Operations,Manager,24,158168,73.0,5.0,No,9,No,2018-07-31
+EMP1172,Employee 173,Male,45,Sales,Manager,22,133899,76.3,4.0,No,51,Yes,2017-06-17
+EMP1173,Employee 174,Male,37,Engineering,Senior Manager,15,51201,97.8,2.0,Yes,71,Yes,2018-01-03
+EMP1174,Employee 175,Female,33,Sales,Senior Manager,11,175787,82.4,5.0,No,74,No,2018-04-04
+EMP1175,Employee 176,Male,40,Finance,Lead,16,171150,81.9,5.0,Yes,60,No,2018-04-27
+EMP1176,Employee 177,Female,45,IT,Senior Executive,15,30105,79.4,4.0,No,63,No,2020-10-26
+EMP1177,Employee 178,Male,24,HR,Lead,11,142666,74.4,2.0,No,4,No,2023-03-14
+EMP1178,Employee 179,Female,30,Engineering,Senior Executive,7,119848,84.6,4.0,No,52,No,2025-01-21
+EMP1179,Employee 180,Male,23,Sales,Manager,19,27839,73.9,2.0,No,54,No,2016-11-18
+EMP1180,Employee 181,Male,38,Marketing,Executive,2,93920,95.1,4.0,No,36,No,2020-08-30
+EMP1181,Employee 182,Male,56,Engineering,Senior Manager,15,68619,81.1,5.0,Yes,55,Yes,2016-07-19
+EMP1182,Employee 183,Female,42,IT,Senior Executive,12,67821,81.2,5.0,No,58,No,2018-04-22
+EMP1183,Employee 184,Female,54,Engineering,Lead,22,150736,84.2,1.0,No,68,No,2020-03-09
+EMP1184,Employee 185,Male,28,IT,Manager,18,169565,83.3,3.0,No,72,Yes,2024-01-07
+EMP1185,Employee 186,Female,39,Sales,Senior Executive,7,42069,99.8,4.0,No,58,No,2017-04-06
+EMP1186,Employee 187,Female,57,IT,Lead,21,32531,86.4,1.0,No,1,Yes,2018-09-13
+EMP1187,Employee 188,Male,26,Engineering,Senior Manager,4,163808,72.6,3.0,No,64,No,2021-02-04
+EMP1188,Employee 189,Male,46,Marketing,Senior Manager,19,163782,88.2,4.0,No,59,No,2019-12-17
+EMP1189,Employee 190,Male,54,Operations,Associate,7,92155,74.5,2.0,Yes,50,No,2023-09-19
+EMP1190,Employee 191,Male,26,Engineering,Executive,23,170047,70.9,3.0,Yes,29,No,2025-05-25
+EMP1191,Employee 192,Female,57,IT,Associate,11,87424,99.1,5.0,Yes,10,No,2017-12-18
+EMP1192,Employee 193,Female,53,Operations,Manager,0,70603,93.2,1.0,No,75,No,2018-09-12
+EMP1193,Employee 194,Female,42,IT,Senior Executive,24,179324,99.4,3.0,No,38,No,2023-01-31
+EMP1194,Employee 195,Male,41,Marketing,Manager,20,157503,84.3,3.0,No,76,No,2019-07-03
+EMP1195,Employee 196,Male,26,IT,Lead,19,117573,86.0,5.0,No,71,No,2022-06-09
+EMP1196,Employee 197,Female,26,Sales,Senior Manager,5,165629,75.1,4.0,No,62,No,2015-07-10
+EMP1197,Employee 198,Female,24,HR,Associate,21,128302,77.4,2.0,No,63,No,2018-05-08
+EMP1198,Employee 199,Female,50,Engineering,Associate,17,156234,95.2,5.0,No,60,No,2018-08-28
+EMP1199,Employee 200,Female,31,HR,Associate,7,44675,80.7,2.0,Yes,53,No,2016-12-08
+EMP1200,Employee 201,Female,50,IT,Manager,6,98997,94.8,4.0,Yes,72,No,2023-07-04
+EMP1201,Employee 202,Male,51,Marketing,Senior Manager,0,173087,91.3,3.0,No,57,No,2016-01-14
+EMP1202,Employee 203,Male,44,Engineering,Senior Executive,20,165905,75.3,2.0,No,55,No,2016-01-22
+EMP1203,Employee 204,Female,29,IT,Lead,15,32896,85.2,1.0,No,33,No,2021-04-03
+EMP1204,Employee 205,Female,23,Operations,Senior Executive,11,74733,90.3,1.0,No,30,No,2016-09-07
+EMP1205,Employee 206,Male,51,Finance,Manager,5,66800,77.1,5.0,No,51,No,2019-03-23
+EMP1206,Employee 207,Male,57,IT,Lead,19,121044,94.9,4.0,Yes,75,No,2021-05-19
+EMP1207,Employee 208,Female,56,HR,Associate,1,30347,86.3,5.0,No,0,No,2020-08-10
+EMP1208,Employee 209,Male,44,Engineering,Executive,13,158715,75.0,5.0,No,54,No,2019-10-21
+EMP1209,Employee 210,Male,51,HR,Manager,3,65785,87.5,5.0,No,21,No,2016-04-08
+EMP1210,Employee 211,Male,26,Engineering,Manager,0,43681,100.0,1.0,No,39,No,2024-01-15
+EMP1211,Employee 212,Female,22,IT,Senior Manager,22,128864,74.5,1.0,No,0,No,2017-08-24
+EMP1212,Employee 213,Female,40,Sales,Senior Executive,17,171964,94.5,5.0,No,64,Yes,2015-06-21
+EMP1213,Employee 214,Male,48,Operations,Manager,12,72299,76.2,1.0,No,62,No,2023-08-25
+EMP1214,Employee 215,Female,31,IT,Manager,1,42073,93.5,4.0,No,53,Yes,2024-12-03
+EMP1215,Employee 216,Male,24,HR,Associate,8,127304,92.0,5.0,No,41,No,2018-02-20
+EMP1216,Employee 217,Male,35,Finance,Associate,20,55682,79.0,1.0,No,20,Yes,2017-04-22
+EMP1217,Employee 218,Female,26,Finance,Lead,1,149302,79.8,2.0,No,78,Yes,2018-08-14
+EMP1218,Employee 219,Female,50,Marketing,Executive,24,170361,93.8,5.0,No,21,No,2020-03-23
+EMP1219,Employee 220,Female,58,Engineering,Senior Manager,8,140359,83.8,5.0,Yes,37,No,2016-11-20
+EMP1220,Employee 221,Female,22,HR,Executive,0,163999,91.9,4.0,No,79,No,2022-03-07
+EMP1221,Employee 222,Male,35,Marketing,Lead,10,91707,74.4,3.0,No,7,No,2019-02-16
+EMP1222,Employee 223,Male,31,HR,Associate,2,90428,95.6,3.0,No,61,Yes,2021-01-21
+EMP1223,Employee 224,Male,28,Engineering,Senior Executive,19,75601,91.3,4.0,No,46,No,2020-07-17
+EMP1224,Employee 225,Male,46,IT,Associate,22,158611,97.2,4.0,No,16,No,2019-09-19
+EMP1225,Employee 226,Male,25,IT,Senior Manager,3,136487,74.0,4.0,No,16,No,2016-01-18
+EMP1226,Employee 227,Female,26,Finance,Associate,17,178741,87.8,3.0,No,12,No,2021-03-06
+EMP1227,Employee 228,Male,46,IT,Senior Manager,22,176716,88.0,4.0,Yes,16,No,2024-08-04
+EMP1228,Employee 229,Female,24,IT,Senior Manager,5,174817,80.6,1.0,No,37,No,2018-11-13
+EMP1229,Employee 230,Female,39,Sales,Senior Manager,2,53228,83.8,5.0,No,77,No,2019-05-03
+EMP1230,Employee 231,Female,40,Finance,Lead,21,147788,71.1,5.0,No,44,Yes,2021-03-21
+EMP1231,Employee 232,Male,53,Marketing,Senior Manager,10,122239,92.4,2.0,No,5,No,2020-08-12
+EMP1232,Employee 233,Male,40,Operations,Senior Manager,14,51928,86.5,2.0,No,34,No,2016-01-07
+EMP1233,Employee 234,Male,32,Sales,Senior Executive,21,43322,71.7,5.0,No,13,No,2019-09-07
+EMP1234,Employee 235,Male,21,Marketing,Executive,4,112896,90.4,1.0,No,71,No,2019-01-09
+EMP1235,Employee 236,Female,46,Engineering,Manager,19,87292,84.0,3.0,No,60,Yes,2016-09-02
+EMP1236,Employee 237,Male,34,Sales,Executive,9,54055,71.0,3.0,No,14,No,2015-04-26
+EMP1237,Employee 238,Male,58,Marketing,Senior Manager,11,67891,99.1,1.0,No,53,No,2024-02-24
+EMP1238,Employee 239,Female,57,Engineering,Senior Executive,14,106912,98.5,3.0,No,26,No,2016-03-22
+EMP1239,Employee 240,Male,31,Finance,Associate,16,162660,85.4,4.0,No,12,No,2018-10-23
+EMP1240,Employee 241,Female,56,Operations,Senior Executive,9,115536,72.8,5.0,No,30,Yes,2024-02-07
+EMP1241,Employee 242,Female,33,Engineering,Senior Manager,5,31304,92.6,5.0,No,34,No,2018-09-02
+EMP1242,Employee 243,Female,23,IT,Senior Executive,17,32345,84.8,1.0,No,59,No,2016-02-19
+EMP1243,Employee 244,Male,53,HR,Senior Executive,12,116006,79.1,3.0,Yes,5,No,2023-09-02
+EMP1244,Employee 245,Male,26,Engineering,Senior Manager,2,171424,84.7,2.0,No,68,Yes,2019-12-14
+EMP1245,Employee 246,Female,30,Engineering,Lead,23,154350,85.7,2.0,No,57,No,2023-01-18
+EMP1246,Employee 247,Male,25,Operations,Senior Executive,9,44446,86.9,3.0,No,48,Yes,2017-11-13
+EMP1247,Employee 248,Female,43,HR,Manager,13,27336,83.2,2.0,No,22,Yes,2025-02-16
+EMP1248,Employee 249,Female,30,IT,Manager,5,87032,88.2,1.0,No,33,No,2022-06-03
+EMP1249,Employee 250,Female,22,Marketing,Senior Executive,2,122852,97.6,1.0,No,25,No,2020-02-17
+EMP1250,Employee 251,Male,33,Marketing,Lead,15,163593,80.9,3.0,No,46,No,2017-12-09
+EMP1251,Employee 252,Male,22,Engineering,Associate,6,179553,91.8,2.0,Yes,4,No,2024-10-13
+EMP1252,Employee 253,Female,40,HR,Senior Manager,19,43474,96.8,1.0,Yes,19,No,2016-12-18
+EMP1253,Employee 254,Male,21,HR,Manager,13,80718,83.7,1.0,No,5,Yes,2024-10-09
+EMP1254,Employee 255,Male,57,IT,Associate,8,69629,83.3,4.0,No,69,No,2018-09-20
+EMP1255,Employee 256,Male,29,Operations,Senior Executive,14,70232,88.1,4.0,No,58,No,2023-08-17
+EMP1256,Employee 257,Female,37,Finance,Associate,20,111544,87.7,1.0,No,63,No,2019-05-25
+EMP1257,Employee 258,Female,29,Marketing,Executive,2,75669,94.2,3.0,No,17,No,2023-06-26
+EMP1258,Employee 259,Male,31,Operations,Manager,1,94184,84.3,5.0,No,3,No,2021-05-07
+EMP1259,Employee 260,Male,35,Sales,Senior Executive,1,38140,99.9,5.0,No,16,No,2016-07-15
+EMP1260,Employee 261,Female,44,Marketing,Senior Manager,2,151468,71.8,1.0,No,13,No,2022-10-22
+EMP1261,Employee 262,Female,58,Operations,Lead,17,108457,70.1,1.0,No,77,No,2021-04-13
+EMP1262,Employee 263,Male,55,Marketing,Senior Executive,13,39357,89.2,1.0,Yes,12,No,2025-01-10
+EMP1263,Employee 264,Male,50,Finance,Senior Manager,19,136672,79.0,3.0,No,6,No,2016-01-22
+EMP1264,Employee 265,Female,51,Sales,Lead,17,93673,77.2,4.0,No,43,No,2016-12-02
+EMP1265,Employee 266,Female,25,Finance,Lead,9,146673,79.4,1.0,No,14,No,2022-02-19
+EMP1266,Employee 267,Female,34,IT,Senior Executive,24,90633,77.7,1.0,No,18,No,2017-08-30
+EMP1267,Employee 268,Female,31,Sales,Associate,1,121111,70.9,2.0,Yes,62,No,2018-10-16
+EMP1268,Employee 269,Male,29,Engineering,Associate,24,103258,99.1,3.0,No,34,No,2017-09-10
+EMP1269,Employee 270,Male,54,Operations,Lead,21,168996,76.6,1.0,No,34,No,2019-02-20
+EMP1270,Employee 271,Female,32,Sales,Associate,0,94286,92.0,2.0,No,18,No,2015-12-18
+EMP1271,Employee 272,Female,55,IT,Executive,3,118269,92.9,5.0,No,19,No,2019-09-21
+EMP1272,Employee 273,Female,55,IT,Lead,13,99071,97.9,1.0,No,34,No,2020-05-05
+EMP1273,Employee 274,Female,21,Finance,Lead,0,55651,70.9,1.0,No,31,No,2018-07-03
+EMP1274,Employee 275,Male,42,Marketing,Senior Manager,13,95202,96.2,2.0,No,47,No,2024-01-07
+EMP1275,Employee 276,Male,49,Sales,Associate,15,73777,85.8,3.0,No,43,No,2020-03-22
+EMP1276,Employee 277,Female,28,Operations,Lead,21,173066,89.0,1.0,No,23,No,2017-01-22
+EMP1277,Employee 278,Female,31,Sales,Executive,13,92263,89.3,5.0,Yes,60,No,2022-09-29
+EMP1278,Employee 279,Female,57,HR,Senior Manager,19,125158,94.6,1.0,No,16,No,2017-10-21
+EMP1279,Employee 280,Female,34,Marketing,Senior Executive,2,35800,80.0,5.0,No,70,No,2016-06-29
+EMP1280,Employee 281,Female,50,Operations,Lead,2,62823,92.0,4.0,No,49,No,2019-01-09
+EMP1281,Employee 282,Male,55,Operations,Executive,8,88878,85.9,4.0,No,64,Yes,2015-03-20
+EMP1282,Employee 283,Male,41,Engineering,Manager,5,43708,93.8,5.0,No,31,No,2018-06-13
+EMP1283,Employee 284,Male,57,Finance,Executive,24,168891,99.7,3.0,No,35,Yes,2021-07-09
+EMP1284,Employee 285,Male,25,Engineering,Executive,12,88870,76.0,1.0,No,12,No,2017-06-07
+EMP1285,Employee 286,Male,39,Operations,Senior Manager,20,34283,99.8,1.0,No,69,No,2024-05-13
+EMP1286,Employee 287,Male,34,Marketing,Senior Executive,1,103707,72.7,4.0,Yes,57,No,2023-09-05
+EMP1287,Employee 288,Male,46,Sales,Manager,7,30774,70.1,5.0,Yes,13,No,2018-01-10
+EMP1288,Employee 289,Male,24,Sales,Associate,20,167055,71.3,1.0,No,36,Yes,2021-12-24
+EMP1289,Employee 290,Female,45,Marketing,Associate,1,121468,80.3,1.0,Yes,78,No,2020-06-13
+EMP1290,Employee 291,Male,45,Operations,Executive,3,121334,89.0,3.0,Yes,67,No,2019-02-09
+EMP1291,Employee 292,Male,38,IT,Senior Manager,24,43133,72.1,2.0,No,39,No,2025-05-03
+EMP1292,Employee 293,Female,28,Sales,Senior Manager,14,171011,70.2,4.0,No,58,No,2022-09-13
+EMP1293,Employee 294,Male,34,IT,Associate,3,25781,98.1,4.0,No,79,Yes,2017-07-09
+EMP1294,Employee 295,Male,52,Sales,Manager,12,139586,94.7,2.0,Yes,15,Yes,2016-07-03
+EMP1295,Employee 296,Male,58,Sales,Senior Executive,11,52624,94.3,1.0,No,61,Yes,2020-08-23
+EMP1296,Employee 297,Female,53,Finance,Manager,12,31823,96.5,3.0,Yes,3,No,2016-01-27
+EMP1297,Employee 298,Male,43,Finance,Lead,13,43489,91.0,3.0,No,44,No,2024-05-11
+EMP1298,Employee 299,Female,35,HR,Lead,19,54118,73.1,4.0,No,27,No,2021-06-15
+EMP1299,Employee 300,Male,53,Engineering,Senior Executive,17,125417,82.0,3.0,No,65,No,2021-08-30
+EMP1300,Employee 301,Male,45,Marketing,Associate,5,106816,91.7,2.0,No,30,No,2023-12-25
+EMP1301,Employee 302,Male,37,Marketing,Senior Executive,10,178335,78.4,1.0,Yes,2,No,2018-10-12
+EMP1302,Employee 303,Male,53,Marketing,Senior Manager,1,38565,90.6,2.0,No,7,No,2017-08-31
+EMP1303,Employee 304,Female,22,HR,Lead,22,176426,70.7,5.0,No,23,No,2025-01-20
+EMP1304,Employee 305,Female,34,Finance,Executive,18,116179,79.2,4.0,No,14,No,2024-12-18
+EMP1305,Employee 306,Female,26,Operations,Executive,18,48648,86.5,3.0,Yes,42,No,2023-09-01
+EMP1306,Employee 307,Male,26,IT,Associate,4,66971,89.0,5.0,No,30,Yes,2023-08-31
+EMP1307,Employee 308,Male,23,IT,Senior Manager,18,43658,87.3,3.0,No,72,No,2015-12-06
+EMP1308,Employee 309,Female,27,Operations,Manager,1,46253,90.9,1.0,No,44,No,2022-03-29
+EMP1309,Employee 310,Male,28,HR,Senior Manager,9,113664,70.2,1.0,No,65,No,2024-08-17
+EMP1310,Employee 311,Male,35,Operations,Executive,24,128850,73.0,1.0,No,7,No,2017-01-26
+EMP1311,Employee 312,Male,49,Marketing,Executive,1,162924,96.1,3.0,No,70,Yes,2017-11-11
+EMP1312,Employee 313,Male,53,Engineering,Lead,10,158623,90.5,5.0,No,56,No,2021-05-27
+EMP1313,Employee 314,Female,50,Sales,Senior Manager,17,96947,73.4,1.0,No,79,No,2024-09-26
+EMP1314,Employee 315,Female,47,IT,Senior Manager,23,86001,95.3,5.0,No,29,No,2021-06-11
+EMP1315,Employee 316,Female,56,Finance,Executive,14,147775,77.3,3.0,No,73,No,2022-05-05
+EMP1316,Employee 317,Male,49,Finance,Manager,8,58243,84.3,5.0,No,17,Yes,2023-10-05
+EMP1317,Employee 318,Male,58,HR,Associate,22,177872,74.4,3.0,No,68,No,2022-04-26
+EMP1318,Employee 319,Male,53,Finance,Associate,18,100939,91.3,3.0,No,38,Yes,2017-07-27
+EMP1319,Employee 320,Male,57,Marketing,Senior Manager,8,82828,90.0,4.0,No,59,No,2024-02-27
+EMP1320,Employee 321,Male,47,IT,Associate,2,163311,76.3,3.0,No,42,No,2017-04-27
+EMP1321,Employee 322,Female,53,Operations,Executive,20,31710,95.9,3.0,No,44,No,2016-03-17
+EMP1322,Employee 323,Female,24,Marketing,Executive,8,177456,82.0,2.0,No,22,No,2021-12-25
+EMP1323,Employee 324,Male,42,HR,Senior Manager,13,177110,78.8,1.0,No,68,No,2015-05-10
+EMP1324,Employee 325,Female,22,Marketing,Senior Manager,18,62991,74.6,4.0,Yes,5,No,2023-10-09
+EMP1325,Employee 326,Female,30,Operations,Lead,6,163043,78.0,4.0,No,55,No,2016-08-19
+EMP1326,Employee 327,Male,25,Engineering,Senior Manager,15,110445,70.7,4.0,No,3,No,2020-05-12
+EMP1327,Employee 328,Female,30,HR,Manager,15,105257,87.5,2.0,Yes,22,Yes,2019-02-14
+EMP1328,Employee 329,Male,53,Engineering,Associate,0,62711,95.3,3.0,No,5,Yes,2017-05-11
+EMP1329,Employee 330,Male,58,Sales,Senior Manager,3,31530,86.5,1.0,No,31,No,2024-06-23
+EMP1330,Employee 331,Male,33,Engineering,Senior Executive,3,36116,76.6,5.0,Yes,17,No,2022-03-25
+EMP1331,Employee 332,Female,51,Sales,Lead,6,90794,71.0,3.0,No,14,No,2017-09-25
+EMP1332,Employee 333,Male,56,Sales,Senior Executive,7,156354,76.4,2.0,No,39,No,2021-06-30
+EMP1333,Employee 334,Male,44,Engineering,Executive,16,157970,82.5,3.0,No,72,No,2023-08-07
+EMP1334,Employee 335,Male,35,HR,Associate,4,29135,92.8,3.0,No,73,No,2025-03-20
+EMP1335,Employee 336,Male,49,Operations,Senior Manager,6,162701,75.6,2.0,Yes,5,No,2021-10-31
+EMP1336,Employee 337,Female,28,Marketing,Senior Executive,19,134472,91.6,4.0,Yes,62,No,2019-04-01
+EMP1337,Employee 338,Female,25,Marketing,Associate,19,150147,96.0,4.0,No,66,No,2022-11-06
+EMP1338,Employee 339,Male,49,Operations,Executive,3,114087,83.6,1.0,No,10,No,2019-06-29
+EMP1339,Employee 340,Male,24,IT,Manager,5,58380,94.6,1.0,No,42,Yes,2023-11-11
+EMP1340,Employee 341,Male,32,IT,Lead,6,154951,86.6,4.0,Yes,16,Yes,2019-02-20
+EMP1341,Employee 342,Male,22,Sales,Associate,17,42071,89.1,5.0,No,3,No,2019-10-03
+EMP1342,Employee 343,Male,47,Sales,Associate,4,45074,85.8,3.0,Yes,62,No,2022-07-19
+EMP1343,Employee 344,Male,51,HR,Manager,19,92843,83.9,5.0,Yes,67,No,2018-12-20
+EMP1344,Employee 345,Male,56,Finance,Associate,2,64901,77.0,3.0,No,40,No,2025-04-26
+EMP1345,Employee 346,Female,56,Engineering,Executive,6,36205,79.1,4.0,No,4,No,2020-02-01
+EMP1346,Employee 347,Female,46,Sales,Executive,21,149661,78.7,1.0,No,31,Yes,2015-09-22
+EMP1347,Employee 348,Male,47,Marketing,Manager,13,30906,86.9,1.0,No,69,No,2022-04-13
+EMP1348,Employee 349,Male,25,HR,Lead,6,158663,73.6,5.0,No,34,No,2024-05-06
+EMP1349,Employee 350,Female,40,Engineering,Senior Manager,4,150576,97.5,1.0,No,21,No,2022-11-19
+EMP1350,Employee 351,Male,31,HR,Senior Executive,21,87987,91.6,4.0,No,64,No,2025-05-25
+EMP1351,Employee 352,Female,30,Engineering,Senior Manager,4,105685,82.0,5.0,No,21,No,2024-03-03
+EMP1352,Employee 353,Female,58,Engineering,Associate,22,135454,74.8,3.0,No,10,No,2022-06-14
+EMP1353,Employee 354,Male,26,Operations,Senior Executive,1,130487,96.5,1.0,No,76,No,2019-01-02
+EMP1354,Employee 355,Male,28,Sales,Manager,20,79400,94.7,2.0,Yes,2,No,2015-06-06
+EMP1355,Employee 356,Female,43,HR,Manager,21,56852,91.7,1.0,No,8,No,2018-12-16
+EMP1356,Employee 357,Male,46,HR,Lead,5,77756,78.1,3.0,Yes,59,No,2021-04-17
+EMP1357,Employee 358,Female,32,Operations,Senior Executive,14,140357,82.1,5.0,No,75,No,2023-01-04
+EMP1358,Employee 359,Female,46,Marketing,Executive,20,144052,73.1,3.0,No,13,No,2019-06-21
+EMP1359,Employee 360,Male,33,Marketing,Senior Executive,9,81481,75.7,2.0,Yes,17,No,2022-01-21
+EMP1360,Employee 361,Male,38,IT,Associate,22,26283,93.5,4.0,No,72,No,2021-07-02
+EMP1361,Employee 362,Female,45,Sales,Executive,23,58691,91.5,1.0,No,22,No,2023-03-28
+EMP1362,Employee 363,Male,53,Sales,Manager,6,157197,87.8,5.0,No,73,No,2017-06-13
+EMP1363,Employee 364,Male,32,Finance,Senior Executive,4,51170,96.9,4.0,No,46,Yes,2020-11-14
+EMP1364,Employee 365,Female,56,Operations,Senior Manager,0,33438,87.5,3.0,No,68,No,2016-05-27
+EMP1365,Employee 366,Male,24,Marketing,Lead,12,45095,84.0,5.0,No,46,No,2015-08-04
+EMP1366,Employee 367,Female,25,Engineering,Senior Manager,20,172226,80.2,4.0,No,29,Yes,2023-10-09
+EMP1367,Employee 368,Female,57,HR,Lead,17,164076,98.2,5.0,No,24,No,2024-02-14
+EMP1368,Employee 369,Male,28,Sales,Associate,12,34752,72.5,2.0,No,27,Yes,2020-12-12
+EMP1369,Employee 370,Male,48,HR,Senior Manager,20,80426,97.9,2.0,No,24,No,2023-08-20
+EMP1370,Employee 371,Male,51,HR,Senior Executive,20,51819,94.8,1.0,No,73,No,2024-03-08
+EMP1371,Employee 372,Male,29,Finance,Senior Executive,17,117051,73.9,1.0,No,77,No,2019-09-03
+EMP1372,Employee 373,Male,49,Marketing,Senior Manager,4,57994,86.9,2.0,Yes,57,Yes,2020-10-07
+EMP1373,Employee 374,Female,34,Sales,Senior Executive,12,171108,96.0,5.0,Yes,40,No,2019-04-17
+EMP1374,Employee 375,Male,42,HR,Associate,3,122756,87.2,2.0,Yes,24,No,2021-01-17
+EMP1375,Employee 376,Male,31,Sales,Executive,16,165659,97.2,1.0,No,77,No,2021-05-20
+EMP1376,Employee 377,Female,43,Engineering,Associate,2,120665,98.3,2.0,No,47,No,2020-11-23
+EMP1377,Employee 378,Male,21,Finance,Lead,16,156717,82.7,2.0,No,9,No,2018-02-02
+EMP1378,Employee 379,Female,57,Engineering,Associate,10,106835,81.3,5.0,No,74,Yes,2024-08-11
+EMP1379,Employee 380,Male,41,Sales,Lead,20,147232,98.1,4.0,No,10,No,2015-08-16
+EMP1380,Employee 381,Male,46,IT,Senior Executive,19,174960,90.3,1.0,Yes,20,Yes,2025-04-29
+EMP1381,Employee 382,Female,56,Sales,Executive,22,68732,73.5,5.0,No,44,No,2025-01-01
+EMP1382,Employee 383,Female,43,Marketing,Senior Executive,20,71305,71.3,2.0,No,6,No,2021-06-23
+EMP1383,Employee 384,Female,21,HR,Manager,3,34346,86.9,2.0,No,63,No,2019-01-27
+EMP1384,Employee 385,Female,35,HR,Senior Executive,1,25587,97.9,4.0,No,63,Yes,2017-03-12
+EMP1385,Employee 386,Female,41,Engineering,Lead,19,37763,95.3,1.0,No,1,No,2019-06-11
+EMP1386,Employee 387,Male,29,Finance,Senior Executive,15,94615,90.3,1.0,No,75,No,2020-03-20
+EMP1387,Employee 388,Male,29,IT,Senior Executive,17,145987,74.2,3.0,No,41,Yes,2022-12-31
+EMP1388,Employee 389,Female,30,Operations,Executive,7,116353,77.6,1.0,No,53,No,2016-04-16
+EMP1389,Employee 390,Female,46,HR,Senior Executive,2,120648,96.3,4.0,No,74,No,2017-12-15
+EMP1390,Employee 391,Female,55,Marketing,Executive,8,50556,75.5,3.0,Yes,15,No,2022-04-26
+EMP1391,Employee 392,Male,45,Engineering,Senior Manager,19,84042,78.4,3.0,No,17,Yes,2020-08-22
+EMP1392,Employee 393,Male,46,Engineering,Manager,5,43099,73.9,2.0,Yes,58,No,2024-08-12
+EMP1393,Employee 394,Female,31,Operations,Executive,9,134089,90.3,2.0,No,15,No,2017-11-07
+EMP1394,Employee 395,Male,58,Marketing,Lead,20,169302,98.3,1.0,Yes,5,No,2022-07-04
+EMP1395,Employee 396,Female,22,Finance,Senior Manager,9,58866,78.1,3.0,No,56,No,2023-04-09
+EMP1396,Employee 397,Female,27,Marketing,Executive,12,130400,84.3,2.0,No,46,No,2020-11-30
+EMP1397,Employee 398,Male,38,Finance,Executive,16,109246,89.0,4.0,No,47,No,2015-08-17
+EMP1398,Employee 399,Female,47,Marketing,Manager,8,101975,100.0,2.0,Yes,41,No,2015-06-20
+EMP1399,Employee 400,Female,54,Marketing,Lead,16,106557,73.1,2.0,Yes,75,No,2015-10-22
+EMP1400,Employee 401,Male,47,Sales,Associate,23,162488,85.0,3.0,Yes,59,No,2015-07-08
+EMP1401,Employee 402,Female,37,Engineering,Associate,8,97516,81.6,3.0,Yes,76,No,2016-03-01
+EMP1402,Employee 403,Male,44,Marketing,Executive,8,174130,96.0,5.0,Yes,3,No,2017-09-03
+EMP1403,Employee 404,Female,45,Operations,Senior Executive,0,57602,84.3,4.0,No,1,No,2018-01-07
+EMP1404,Employee 405,Male,27,Marketing,Lead,1,154295,73.3,3.0,Yes,58,No,2022-05-29
+EMP1405,Employee 406,Female,26,HR,Senior Manager,15,112969,89.0,1.0,Yes,26,No,2017-07-07
+EMP1406,Employee 407,Male,44,Engineering,Senior Executive,0,157161,93.1,4.0,No,26,Yes,2023-11-28
+EMP1407,Employee 408,Male,53,HR,Senior Executive,9,166559,70.1,4.0,No,78,No,2016-05-13
+EMP1408,Employee 409,Female,49,Engineering,Lead,17,25155,95.8,3.0,No,71,No,2019-12-27
+EMP1409,Employee 410,Male,42,HR,Executive,7,148950,75.6,4.0,No,6,No,2022-09-10
+EMP1410,Employee 411,Male,46,Marketing,Executive,20,92494,86.6,3.0,No,62,No,2017-05-15
+EMP1411,Employee 412,Female,48,Marketing,Executive,10,101229,82.5,2.0,Yes,45,No,2017-04-05
+EMP1412,Employee 413,Female,41,Sales,Executive,22,129648,91.6,5.0,No,62,No,2025-05-07
+EMP1413,Employee 414,Male,27,Operations,Associate,1,63547,81.1,2.0,No,11,Yes,2020-02-02
+EMP1414,Employee 415,Female,37,HR,Executive,7,53795,96.1,3.0,Yes,12,No,2020-10-19
+EMP1415,Employee 416,Male,40,Finance,Associate,21,46447,91.9,3.0,No,42,No,2021-04-14
+EMP1416,Employee 417,Male,40,Sales,Associate,7,112960,89.4,2.0,No,16,No,2015-05-26
+EMP1417,Employee 418,Male,42,HR,Executive,16,88278,93.9,1.0,Yes,62,No,2019-06-30
+EMP1418,Employee 419,Female,48,HR,Manager,14,80077,92.6,1.0,No,35,No,2018-08-12
+EMP1419,Employee 420,Female,27,Sales,Senior Manager,16,137782,71.1,1.0,No,7,No,2022-03-14
+EMP1420,Employee 421,Female,21,Marketing,Senior Executive,22,127932,81.8,3.0,No,68,No,2016-04-14
+EMP1421,Employee 422,Female,52,HR,Associate,23,165600,97.9,4.0,Yes,79,No,2024-10-17
+EMP1422,Employee 423,Male,33,Marketing,Lead,12,134869,73.8,3.0,No,35,Yes,2015-07-12
+EMP1423,Employee 424,Male,50,Sales,Lead,18,164251,92.1,4.0,No,27,No,2017-12-27
+EMP1424,Employee 425,Male,43,Marketing,Senior Manager,4,73781,99.2,2.0,No,46,No,2021-12-16
+EMP1425,Employee 426,Male,39,Engineering,Lead,11,78798,71.6,5.0,No,75,No,2015-02-21
+EMP1426,Employee 427,Male,52,Finance,Manager,0,123696,90.5,4.0,Yes,29,Yes,2023-01-08
+EMP1427,Employee 428,Female,50,IT,Lead,22,75939,84.0,1.0,Yes,22,No,2021-08-07
+EMP1428,Employee 429,Male,49,HR,Senior Executive,4,54516,87.4,3.0,No,15,No,2019-12-26
+EMP1429,Employee 430,Male,49,Operations,Senior Executive,7,166521,72.6,2.0,No,13,No,2023-02-12
+EMP1430,Employee 431,Male,50,Finance,Associate,12,75290,71.3,1.0,No,73,Yes,2021-11-26
+EMP1431,Employee 432,Female,36,IT,Executive,7,151688,90.0,2.0,No,70,No,2020-02-13
+EMP1432,Employee 433,Female,39,Marketing,Manager,24,111661,94.7,5.0,No,51,No,2022-01-12
+EMP1433,Employee 434,Male,38,HR,Associate,22,97954,93.5,3.0,No,36,No,2019-11-22
+EMP1434,Employee 435,Male,21,Marketing,Manager,10,47746,86.3,3.0,No,28,No,2018-12-25
+EMP1435,Employee 436,Female,34,Engineering,Executive,0,92990,73.0,5.0,Yes,66,No,2020-02-11
+EMP1436,Employee 437,Male,22,Sales,Lead,12,83810,90.6,3.0,No,14,No,2024-03-23
+EMP1437,Employee 438,Female,48,HR,Lead,18,143362,77.3,4.0,No,46,No,2024-08-07
+EMP1438,Employee 439,Female,50,IT,Executive,23,171295,97.3,2.0,No,45,No,2025-04-25
+EMP1439,Employee 440,Male,58,IT,Associate,2,158669,95.1,1.0,No,51,No,2022-07-01
+EMP1440,Employee 441,Male,24,Engineering,Executive,23,27659,91.3,5.0,Yes,18,No,2023-12-14
+EMP1441,Employee 442,Female,21,Engineering,Senior Manager,16,111516,98.5,4.0,Yes,76,No,2023-10-05
+EMP1442,Employee 443,Male,28,HR,Senior Executive,4,99567,70.9,1.0,Yes,20,No,2022-01-23
+EMP1443,Employee 444,Male,49,Marketing,Associate,19,40037,92.1,1.0,No,63,No,2020-06-30
+EMP1444,Employee 445,Female,23,Operations,Manager,20,151498,79.9,5.0,No,36,Yes,2018-12-05
+EMP1445,Employee 446,Female,52,IT,Senior Manager,7,37109,97.2,4.0,No,26,No,2017-04-19
+EMP1446,Employee 447,Female,30,IT,Associate,13,47010,78.0,1.0,Yes,54,No,2023-08-03
+EMP1447,Employee 448,Female,30,Engineering,Executive,3,33787,91.7,1.0,No,28,No,2025-04-23
+EMP1448,Employee 449,Male,39,Finance,Executive,10,164544,96.3,4.0,No,19,Yes,2015-08-29
+EMP1449,Employee 450,Male,54,Engineering,Executive,19,179455,71.2,3.0,No,24,No,2024-06-02
+EMP1450,Employee 451,Female,53,Operations,Executive,14,86709,81.9,1.0,No,69,No,2016-06-19
+EMP1451,Employee 452,Male,43,Marketing,Manager,18,59518,92.9,2.0,No,62,No,2018-11-08
+EMP1452,Employee 453,Male,48,Marketing,Senior Manager,6,78909,83.6,4.0,No,35,No,2024-08-03
+EMP1453,Employee 454,Female,52,Finance,Lead,18,43351,78.0,1.0,Yes,1,No,2015-03-24
+EMP1454,Employee 455,Male,27,IT,Senior Executive,18,40282,76.6,5.0,No,21,No,2017-09-08
+EMP1455,Employee 456,Male,49,Engineering,Manager,10,177850,73.9,2.0,Yes,15,Yes,2025-04-26
+EMP1456,Employee 457,Male,28,Marketing,Manager,4,30075,95.7,1.0,No,17,No,2017-08-08
+EMP1457,Employee 458,Male,21,Operations,Lead,4,53365,87.3,2.0,No,68,No,2016-09-02
+EMP1458,Employee 459,Male,23,HR,Lead,21,36002,72.3,2.0,No,53,No,2016-07-27
+EMP1459,Employee 460,Male,44,Sales,Senior Executive,7,38947,81.5,3.0,No,29,Yes,2021-05-22
+EMP1460,Employee 461,Male,43,Sales,Senior Executive,9,119840,81.0,2.0,No,44,No,2017-09-15
+EMP1461,Employee 462,Female,28,Sales,Lead,5,141219,75.5,3.0,No,18,No,2024-11-14
+EMP1462,Employee 463,Female,57,IT,Executive,14,103610,83.1,4.0,No,33,No,2016-04-03
+EMP1463,Employee 464,Female,23,Engineering,Manager,15,77142,80.0,3.0,No,12,No,2023-12-28
+EMP1464,Employee 465,Female,53,Finance,Associate,16,81307,80.3,5.0,No,42,No,2020-12-13
+EMP1465,Employee 466,Male,48,Marketing,Senior Executive,7,160565,92.2,1.0,No,61,No,2024-07-16
+EMP1466,Employee 467,Male,28,HR,Senior Executive,7,75085,76.7,4.0,No,21,Yes,2019-03-03
+EMP1467,Employee 468,Female,54,Operations,Lead,24,59228,89.3,4.0,No,51,No,2021-10-08
+EMP1468,Employee 469,Male,55,HR,Senior Manager,8,68472,87.1,5.0,No,51,Yes,2022-02-14
+EMP1469,Employee 470,Female,52,Operations,Associate,1,74437,87.0,3.0,No,35,Yes,2022-04-11
+EMP1470,Employee 471,Male,44,IT,Associate,14,84711,89.9,1.0,No,72,No,2020-06-07
+EMP1471,Employee 472,Female,34,Engineering,Senior Executive,17,162888,86.5,3.0,Yes,18,Yes,2019-04-16
+EMP1472,Employee 473,Male,52,Sales,Executive,2,102175,96.4,2.0,No,37,Yes,2023-11-04
+EMP1473,Employee 474,Female,36,Engineering,Senior Manager,16,89307,90.3,3.0,Yes,69,No,2020-11-29
+EMP1474,Employee 475,Male,24,IT,Associate,3,71733,86.4,4.0,No,78,No,2021-09-15
+EMP1475,Employee 476,Female,57,Finance,Senior Executive,3,153202,94.9,1.0,No,56,Yes,2015-05-02
+EMP1476,Employee 477,Male,41,Finance,Associate,13,120028,88.2,3.0,No,19,No,2015-09-30
+EMP1477,Employee 478,Male,34,IT,Senior Manager,8,167312,78.7,1.0,No,8,No,2018-08-10
+EMP1478,Employee 479,Female,51,Operations,Senior Manager,8,117493,76.2,1.0,No,31,No,2016-02-02
+EMP1479,Employee 480,Male,38,Marketing,Manager,24,150149,74.6,2.0,No,3,No,2021-11-23
+EMP1480,Employee 481,Female,27,Marketing,Lead,22,33259,97.0,2.0,No,49,Yes,2017-09-11
+EMP1481,Employee 482,Female,30,Operations,Lead,17,153775,91.3,4.0,No,4,No,2018-05-15
+EMP1482,Employee 483,Male,27,Finance,Senior Executive,9,39849,98.1,5.0,No,19,No,2018-02-07
+EMP1483,Employee 484,Female,53,Finance,Senior Manager,20,106768,88.1,1.0,No,74,No,2024-08-12
+EMP1484,Employee 485,Female,43,Finance,Manager,3,131108,84.2,5.0,No,36,No,2018-07-25
+EMP1485,Employee 486,Female,41,Engineering,Manager,11,114709,71.8,4.0,No,21,No,2024-12-18
+EMP1486,Employee 487,Male,39,Finance,Associate,7,79869,90.1,1.0,No,57,No,2020-03-25
+EMP1487,Employee 488,Male,39,HR,Associate,1,151888,87.5,1.0,No,67,No,2022-03-01
+EMP1488,Employee 489,Female,56,Sales,Manager,21,88095,99.7,5.0,No,43,No,2019-02-14
+EMP1489,Employee 490,Female,49,Finance,Associate,12,142886,77.2,3.0,No,33,No,2023-09-21
+EMP1490,Employee 491,Male,38,Operations,Senior Manager,20,95910,85.9,2.0,No,76,No,2020-03-31
+EMP1491,Employee 492,Female,22,Sales,Executive,15,48567,89.5,3.0,Yes,41,No,2023-01-23
+EMP1492,Employee 493,Male,21,Engineering,Senior Manager,1,60292,89.3,5.0,No,8,No,2017-03-30
+EMP1493,Employee 494,Male,25,Operations,Manager,10,99813,86.8,2.0,No,6,No,2022-12-10
+EMP1494,Employee 495,Male,40,Sales,Manager,9,122136,93.3,3.0,No,67,No,2024-09-18
+EMP1495,Employee 496,Male,31,Operations,Senior Manager,14,76631,76.1,2.0,No,18,No,2022-07-20
+EMP1496,Employee 497,Female,22,Engineering,Associate,16,34885,91.8,1.0,No,30,Yes,2020-05-10
+EMP1497,Employee 498,Male,23,HR,Associate,7,91314,88.6,3.0,No,34,No,2021-06-26
+EMP1498,Employee 499,Female,43,Engineering,Lead,17,90087,96.9,2.0,No,56,No,2015-06-28
+EMP1499,Employee 500,Female,32,Engineering,Manager,22,120998,95.4,2.0,Yes,60,No,2017-06-15
+EMP1010,Employee 11,Male,38,Finance,Manager,15,89946,70.8,1.0,No,22,No,2016-04-23
+EMP1020,Employee 21,Female,52,Sales,Associate,6,125500,83.4,5.0,No,15,No,2023-12-25

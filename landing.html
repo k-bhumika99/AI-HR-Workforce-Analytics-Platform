@@ -1,0 +1,133 @@
+{% extends "public_base.html" %}
+{% block title %}AI HR Workforce Analytics — Turn HR Data Into Decisions{% endblock %}
+
+{% block content %}
+<section class="hero">
+  <span class="hero-badge">✨ AI-Powered HR Analytics</span>
+  <h1>Turn your HR spreadsheet<br>into a <span class="hero-highlight">workforce story</span> 📊</h1>
+  <p class="hero-subtitle">
+    Upload any employee CSV or Excel file and instantly get cleaned data, beautiful interactive
+    dashboards, and AI-generated HR insights — no data science degree required.
+  </p>
+  <div class="hero-cta">
+    {% if session.get('user') %}
+      <a href="{{ url_for('home') }}" class="btn btn-primary btn-large">🚀 Go to My Dashboard</a>
+    {% else %}
+      <a href="{{ url_for('signup') }}" class="btn btn-primary btn-large">✨ Get Started Free</a>
+      <a href="{{ url_for('login') }}" class="btn btn-ghost btn-large">🔑 Sign In</a>
+    {% endif %}
+  </div>
+  <p class="hero-note">🔒 No credit card needed &middot; Your data stays in your session &middot; CSV &amp; Excel supported</p>
+</section>
+
+<section class="landing-section">
+  <h2 class="section-title">🧭 Everything you need, in one workflow</h2>
+  <p class="section-subtitle">From messy raw data to a polished, presentation-ready HR report — in minutes.</p>
+
+  <div class="feature-grid">
+    <div class="feature-card">
+      <div class="feature-icon">📁</div>
+      <h3>Upload HR Dataset</h3>
+      <p>Drag &amp; drop a CSV or Excel file — column names are matched flexibly, so messy headers still work.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🧹</div>
+      <h3>Data Cleaning &amp; Preprocessing</h3>
+      <p>Duplicates removed, missing values fixed, and inconsistent formats standardized automatically.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">👥</div>
+      <h3>Demographic Analysis</h3>
+      <p>Understand your workforce by gender, age group, department, job role, and experience level.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🗓️</div>
+      <h3>Attendance Analysis</h3>
+      <p>Spot attendance trends and compare average attendance across departments at a glance.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">⭐</div>
+      <h3>Performance Analysis</h3>
+      <p>See performance rating distributions and identify your top-performing departments and employees.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">💰</div>
+      <h3>Salary Trend Analysis</h3>
+      <p>Compare pay by department, role, and gender, and track salary trends by joining year.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🚀</div>
+      <h3>Promotion Analysis</h3>
+      <p>Track promotion rates overall and department-by-department to spot growth opportunities.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🎓</div>
+      <h3>Training Participation</h3>
+      <p>Visualize training hours by department and how experience relates to training investment.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🚪</div>
+      <h3>Attrition Analysis</h3>
+      <p>Historical-only attrition breakdowns by department, gender, salary band, and experience — no predictions.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🏢</div>
+      <h3>Department Comparison</h3>
+      <p>A ranked, side-by-side scorecard comparing every department across all key HR metrics.</p>
+    </div>
+    <div class="feature-card feature-card-highlight">
+      <div class="feature-icon">✨</div>
+      <h3>AI-Generated HR Insights</h3>
+      <p>Gemini analyzes your statistics (never raw employee records) to generate an executive summary, risks, and recommendations.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">📤</div>
+      <h3>Export Anywhere</h3>
+      <p>Download your cleaned dataset as CSV or a shareable PDF summary report, complete with AI insights.</p>
+    </div>
+  </div>
+</section>
+
+<section class="landing-section landing-steps">
+  <h2 class="section-title">⚡ How it works</h2>
+  <div class="steps-row">
+    <div class="step-card">
+      <span class="step-number">1</span>
+      <span class="step-emoji">📁</span>
+      <h3>Upload</h3>
+      <p>Drop in your employee CSV or Excel file.</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step-card">
+      <span class="step-number">2</span>
+      <span class="step-emoji">🧹</span>
+      <h3>Clean</h3>
+      <p>We standardize, dedupe, and fix missing values.</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step-card">
+      <span class="step-number">3</span>
+      <span class="step-emoji">📊</span>
+      <h3>Explore</h3>
+      <p>Browse dedicated dashboards for every HR metric.</p>
+    </div>
+    <div class="step-arrow">→</div>
+    <div class="step-card">
+      <span class="step-number">4</span>
+      <span class="step-emoji">✨</span>
+      <h3>Get Insights</h3>
+      <p>Generate AI recommendations and export your report.</p>
+    </div>
+  </div>
+</section>
+
+<section class="landing-cta-banner">
+  <h2>Ready to see your workforce data come to life? 🚀</h2>
+  <p>Sign up free and have your first dashboard in under two minutes.</p>
+  {% if session.get('user') %}
+    <a href="{{ url_for('home') }}" class="btn btn-primary btn-large">🏠 Go to My Dashboard</a>
+  {% else %}
+    <a href="{{ url_for('signup') }}" class="btn btn-primary btn-large">✨ Create Free Account</a>
+  {% endif %}
+</section>
+{% endblock %}

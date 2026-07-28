@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% block title %}Promotion — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>🚀 Promotion Analysis</h1>
+    <p class="page-subtitle">Promotion split and department-wise promotion rates across {{ total }} employees</p>
+  </div>
+</div>
+
+{% include "partials/filter_bar.html" %}
+
+<div class="stat-row">
+  <div class="stat-pill">🚀 Promotion Rate: <strong>{{ promotion.get('promotion_percentage', 'N/A') }}%</strong></div>
+  <div class="stat-pill">👤 Promoted: <strong>{{ promotion.get('promotion_count', 0) }}</strong></div>
+</div>
+
+<section class="module-section">
+  <h2>📊 Promotion Split &amp; Department Rates</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-promotion_pie"></div>
+    <div class="chart-card" id="chart-promotion_dept_bar"></div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<div id="charts-data-container" style="display: none;">
+  {% for key, json_str in charts.items() %}
+    {% if json_str %}
+      <div class="chart-data-item" data-key="{{ key }}" data-json="{{ json_str | forceescape }}"></div>
+    {% endif %}
+  {% endfor %}
+</div>
+
+<script>
+document.querySelectorAll(".chart-data-item").forEach(function(item) {
+  const key = item.dataset.key;
+  // Parse the JSON payload from the data attribute
+  const chartData = JSON.parse(item.dataset.json);
+  const el = document.getElementById("chart-" + key);
+  
+  if (el && chartData) {
+    Plotly.newPlot(el, chartData.data, chartData.layout, {responsive: true, displaylogo: false});
+  }
+});
+</script>
+{% endblock %}

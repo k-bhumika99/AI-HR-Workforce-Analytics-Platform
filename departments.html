@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block title %}Departments — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>🏢 Department-Wise Comparison</h1>
+    <p class="page-subtitle">A ranked scorecard comparing every department across all key HR metrics</p>
+  </div>
+</div>
+
+{% include "partials/filter_bar.html" %}
+
+{% if dept_comparison %}
+<section class="module-section">
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>{% for col in dept_comparison.columns %}<th>{{ col }}</th>{% endfor %}</tr>
+      </thead>
+      <tbody>
+        {% for row in dept_comparison.rows %}
+        <tr {% if row.get('Rank') == 1 %}class="rank-first"{% endif %}>
+          {% for col in dept_comparison.columns %}
+            <td>
+              {% if col == 'Rank' and row[col] == 1 %}🥇 {{ row[col] }}
+              {% elif col == 'Rank' and row[col] == 2 %}🥈 {{ row[col] }}
+              {% elif col == 'Rank' and row[col] == 3 %}🥉 {{ row[col] }}
+              {% else %}{{ row[col] }}{% endif %}
+            </td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% else %}
+<div class="flash flash-error">No Department column found in this dataset, so a comparison table can't be built.</div>
+{% endif %}
+
+{% endblock %}

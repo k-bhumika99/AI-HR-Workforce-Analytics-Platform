@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Export Report{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>📤 Export Report</h1>
+    <p class="page-subtitle">Download your workforce data or a full summary report — generated {{ generated_at }}</p>
+  </div>
+</div>
+
+<div class="export-grid">
+
+  <div class="export-card">
+    <div class="export-icon">📄</div>
+    <h3>Raw Data (CSV)</h3>
+    <p>The currently filtered dataset — {{ row_count }} rows × {{ col_count }} columns — as a plain CSV file.</p>
+    <a href="{{ url_for('export_csv') }}" class="btn btn-primary btn-large">⬇️ Download CSV</a>
+  </div>
+
+  <div class="export-card">
+    <div class="export-icon">🧾</div>
+    <h3>Summary Report (PDF)</h3>
+    <p>KPI cards {% if has_insights %}+ your generated AI HR Insights{% else %}(generate AI insights first to include them){% endif %}, formatted as a shareable PDF.</p>
+    <a href="{{ url_for('export_pdf') }}" class="btn btn-primary btn-large">⬇️ Download PDF</a>
+    {% if not has_insights %}
+      <a href="{{ url_for('ai_insights') }}" class="export-hint-link">✨ Generate AI Insights first →</a>
+    {% endif %}
+  </div>
+
+</div>
+{% endblock %}

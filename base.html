@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{% block title %}AI HR Workforce Analytics{% endblock %}</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+<script src="https://cdn.jsdelivr.net/npm/plotly.js-dist-min@2.32.0/plotly.min.js"></script>
+</head>
+<body>
+
+<header class="topbar">
+  <a href="{{ url_for('landing') }}" class="topbar-left">
+    <span class="logo-mark">👥</span>
+    <span class="app-title">Workforce Analytics</span>
+  </a>
+  <div class="topbar-right">
+    {% if session.get('filename') %}
+      <span class="file-chip">📄 {{ session.get('filename') }}</span>
+    {% endif %}
+    {% if session.get('user') %}
+      <span class="user-chip">😊 {{ session['user']['name'].split(' ')[0] }}</span>
+      <a href="{{ url_for('logout') }}" class="btn btn-ghost btn-small">🚪 Logout</a>
+    {% endif %}
+  </div>
+</header>
+
+<div class="app-shell">
+  {% if session.get('user') %}
+  <nav class="sidebar">
+    {% if session.get('filename') %}
+    <span class="nav-section-label">Analytics</span>
+    <a href="{{ url_for('dashboard') }}" class="nav-link {% if request.endpoint == 'dashboard' %}active{% endif %}">
+      <span class="nav-icon">🏠</span> Overview
+    </a>
+    <a href="{{ url_for('demographics_page') }}" class="nav-link {% if request.endpoint == 'demographics_page' %}active{% endif %}">
+      <span class="nav-icon">👥</span> Demographics
+    </a>
+    <a href="{{ url_for('attendance_page') }}" class="nav-link {% if request.endpoint == 'attendance_page' %}active{% endif %}">
+      <span class="nav-icon">🗓️</span> Attendance
+    </a>
+    <a href="{{ url_for('performance_page') }}" class="nav-link {% if request.endpoint == 'performance_page' %}active{% endif %}">
+      <span class="nav-icon">⭐</span> Performance
+    </a>
+    <a href="{{ url_for('salary_page') }}" class="nav-link {% if request.endpoint == 'salary_page' %}active{% endif %}">
+      <span class="nav-icon">💰</span> Salary
+    </a>
+    <a href="{{ url_for('promotion_page') }}" class="nav-link {% if request.endpoint == 'promotion_page' %}active{% endif %}">
+      <span class="nav-icon">🚀</span> Promotion
+    </a>
+    <a href="{{ url_for('training_page') }}" class="nav-link {% if request.endpoint == 'training_page' %}active{% endif %}">
+      <span class="nav-icon">🎓</span> Training
+    </a>
+    <a href="{{ url_for('attrition_page') }}" class="nav-link {% if request.endpoint == 'attrition_page' %}active{% endif %}">
+      <span class="nav-icon">🚪</span> Attrition
+    </a>
+    <a href="{{ url_for('departments_page') }}" class="nav-link {% if request.endpoint == 'departments_page' %}active{% endif %}">
+      <span class="nav-icon">🏢</span> Departments
+    </a>
+
+    <span class="nav-section-label">AI &amp; Tools</span>
+    <a href="{{ url_for('ai_insights') }}" class="nav-link {% if request.endpoint == 'ai_insights' %}active{% endif %}">
+      <span class="nav-icon">✨</span> AI HR Insights
+    </a>
+    <a href="{{ url_for('export_page') }}" class="nav-link {% if request.endpoint == 'export_page' %}active{% endif %}">
+      <span class="nav-icon">📤</span> Export
+    </a>
+    <a href="{{ url_for('upload_page') }}" class="nav-link">
+      <span class="nav-icon">🔄</span> New Upload
+    </a>
+    {% endif %}
+  </nav>
+  {% endif %}
+
+  <main class="content">
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="flash-stack">
+        {% for category, message in messages %}
+          <div class="flash flash-{{ category }}">{{ message }}</div>
+        {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+</div>
+
+<script src="{{ url_for('static', filename='js/main.js') }}"></script>
+{% block scripts %}{% endblock %}
+</body>
+</html>

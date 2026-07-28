@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% block title %}Overview — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+
+<div class="page-header">
+  <div>
+    <h1>🏠 Workforce Overview</h1>
+    <p class="page-subtitle">{{ clean_stats.get('rows_after', 0) }} employee records
+      &middot; {{ clean_stats.get('duplicates_removed', 0) }} duplicates removed
+      &middot; {{ clean_stats.get('missing_values_fixed', 0) }} values corrected</p>
+  </div>
+</div>
+
+{% include "partials/filter_bar.html" %}
+
+<!-- KPI Cards -->
+<div class="kpi-grid">
+  <div class="kpi-card"><span class="kpi-icon">👤</span><span class="kpi-label">Total Employees</span><span class="kpi-value">{{ kpis.total_employees }}</span></div>
+  <div class="kpi-card"><span class="kpi-icon">💰</span><span class="kpi-label">Average Salary</span><span class="kpi-value">₹{{ "{:,.0f}".format(kpis.average_salary) }}</span></div>
+  <div class="kpi-card"><span class="kpi-icon">🗓️</span><span class="kpi-label">Average Attendance</span><span class="kpi-value">{{ kpis.average_attendance }}%</span></div>
+  <div class="kpi-card"><span class="kpi-icon">⭐</span><span class="kpi-label">Average Performance</span><span class="kpi-value">{{ kpis.average_performance }}</span></div>
+  <div class="kpi-card"><span class="kpi-icon">🚀</span><span class="kpi-label">Promotion Rate</span><span class="kpi-value">{{ kpis.promotion_rate }}%</span></div>
+  <div class="kpi-card"><span class="kpi-icon">🚪</span><span class="kpi-label">Attrition Rate</span><span class="kpi-value">{{ kpis.attrition_rate }}%</span></div>
+  <div class="kpi-card"><span class="kpi-icon">🏢</span><span class="kpi-label">Total Departments</span><span class="kpi-value">{{ kpis.total_departments }}</span></div>
+  <div class="kpi-card"><span class="kpi-icon">🎓</span><span class="kpi-label">Total Training Hours</span><span class="kpi-value">{{ "{:,.0f}".format(kpis.total_training_hours) }}</span></div>
+</div>
+
+<!-- Quick snapshot charts -->
+<section class="module-section">
+  <h2>📸 Quick Snapshot</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-gender_pie"></div>
+    <div class="chart-card" id="chart-dept_bar"></div>
+  </div>
+</section>
+
+<!-- Jump-to cards -->
+<section class="module-section">
+  <h2>🧭 Explore Your Workforce</h2>
+  <div class="jump-grid">
+    <a href="{{ url_for('demographics_page') }}" class="jump-card"><span class="jump-icon">👥</span><span>Demographics</span></a>
+    <a href="{{ url_for('attendance_page') }}" class="jump-card"><span class="jump-icon">🗓️</span><span>Attendance</span></a>
+    <a href="{{ url_for('performance_page') }}" class="jump-card"><span class="jump-icon">⭐</span><span>Performance</span></a>
+    <a href="{{ url_for('salary_page') }}" class="jump-card"><span class="jump-icon">💰</span><span>Salary</span></a>
+    <a href="{{ url_for('promotion_page') }}" class="jump-card"><span class="jump-icon">🚀</span><span>Promotion</span></a>
+    <a href="{{ url_for('training_page') }}" class="jump-card"><span class="jump-icon">🎓</span><span>Training</span></a>
+    <a href="{{ url_for('attrition_page') }}" class="jump-card"><span class="jump-icon">🚪</span><span>Attrition</span></a>
+    <a href="{{ url_for('departments_page') }}" class="jump-card"><span class="jump-icon">🏢</span><span>Departments</span></a>
+    <a href="{{ url_for('ai_insights') }}" class="jump-card jump-card-highlight"><span class="jump-icon">✨</span><span>AI Insights</span></a>
+  </div>
+</section>
+
+<!-- Department Comparison -->
+{% if dept_comparison %}
+<section class="module-section">
+  <h2>🏢 Department Comparison <span class="badge">Ranked scorecard</span></h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>{% for col in dept_comparison.columns %}<th>{{ col }}</th>{% endfor %}</tr>
+      </thead>
+      <tbody>
+        {% for row in dept_comparison.rows %}
+        <tr>
+          {% for col in dept_comparison.columns %}
+            <td>{{ row[col] }}</td>
+          {% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script type="application/json" id="charts-data">
+{
+  {% set comma = joiner(",") %}
+  {% for key, json_str in charts.items() %}
+    {% if json_str %}
+      {{ comma() }}
+      "{{ key }}": {{ json_str | safe }}
+    {% endif %}
+  {% endfor %}
+}
+</script>
+<script>
+const chartsDataEl = document.getElementById("charts-data");
+if (chartsDataEl) {
+  const CHARTS = JSON.parse(chartsDataEl.textContent);
+  Object.keys(CHARTS).forEach(function(key) {
+    const el = document.getElementById("chart-" + key);
+    if (el) {
+      Plotly.newPlot(el, CHARTS[key].data, CHARTS[key].layout, {responsive: true, displaylogo: false});
+    }
+  });
+}
+</script>
+{% endblock %}

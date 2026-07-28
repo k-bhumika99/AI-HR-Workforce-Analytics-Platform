@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Salary — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>💰 Salary Analysis</h1>
+    <p class="page-subtitle">Pay distribution by department, role, gender, and trend over time</p>
+  </div>
+</div>
+
+{% include "partials/filter_bar.html" %}
+
+<div class="stat-row">
+  <div class="stat-pill">📈 Highest: <strong>₹{{ "{:,.0f}".format(salary.get('highest_salary', 0)) }}</strong></div>
+  <div class="stat-pill">📉 Lowest: <strong>₹{{ "{:,.0f}".format(salary.get('lowest_salary', 0)) }}</strong></div>
+  <div class="stat-pill">📊 Median: <strong>₹{{ "{:,.0f}".format(salary.get('median_salary', 0)) }}</strong></div>
+  <div class="stat-pill">💵 Average: <strong>₹{{ "{:,.0f}".format(salary.get('average_salary', 0)) }}</strong></div>
+</div>
+
+<section class="module-section">
+  <h2>🏢 Salary by Department</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-salary_box"></div>
+    <div class="chart-card" id="chart-salary_bar"></div>
+  </div>
+</section>
+
+<section class="module-section">
+  <h2>🚻 Salary by Gender &amp; Role</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-gender_salary_bar"></div>
+    <div class="chart-card" id="chart-role_salary_bar"></div>
+  </div>
+</section>
+
+{% if salary.salary_trend_by_join_year %}
+<section class="module-section">
+  <h2>📈 Salary Trend by Joining Year</h2>
+  <div class="chart-grid">
+    <div class="chart-card chart-wide" id="chart-salary_trend_line"></div>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script type="application/json" id="charts-data">
+{
+  {% set comma = joiner(",") %}
+  {% for key, json_str in charts.items() %}
+    {% if json_str %}
+      {{ comma() }}
+      "{{ key }}": {{ json_str | safe }}
+    {% endif %}
+  {% endfor %}
+}
+</script>
+<script>
+const chartsDataEl = document.getElementById("charts-data");
+if (chartsDataEl) {
+  const CHARTS = JSON.parse(chartsDataEl.textContent);
+  Object.keys(CHARTS).forEach(function(key) {
+    const el = document.getElementById("chart-" + key);
+    if (el) Plotly.newPlot(el, CHARTS[key].data, CHARTS[key].layout, {responsive: true, displaylogo: false});
+  });
+}
+</script>
+{% endblock %}

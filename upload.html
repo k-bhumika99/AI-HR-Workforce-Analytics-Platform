@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Upload Dataset — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+<div class="upload-page">
+  <div class="upload-hero">
+    <h1>📊 AI-Powered HR Workforce Analytics</h1>
+    <p>{% if session.get('user') %}Hi {{ session['user']['name'].split(' ')[0] }} 👋 — {% endif %}Upload your employee
+      dataset to automatically clean it, generate interactive dashboards,
+      and produce AI HR insights — no machine learning, just clear statistics and Gemini-generated recommendations.</p>
+  </div>
+
+  <form action="{{ url_for('upload_page') }}" method="post" enctype="multipart/form-data" id="uploadForm">
+    <div class="dropzone" id="dropzone">
+      <div class="dropzone-icon">⇪</div>
+      <p class="dropzone-text">Drag &amp; drop your CSV or Excel file here</p>
+      <p class="dropzone-subtext">or click to browse — .csv, .xlsx, .xls supported</p>
+      <input type="file" name="file" id="fileInput" accept=".csv,.xlsx,.xls" hidden required>
+    </div>
+
+    <div class="file-selected" id="fileSelected" style="display:none;">
+      <span id="fileName"></span>
+      <button type="button" id="clearFile" class="btn btn-ghost btn-small">Remove</button>
+    </div>
+
+    <div class="progress-wrap" id="progressWrap" style="display:none;">
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <span id="progressLabel">Uploading...</span>
+    </div>
+
+    <button type="submit" class="btn btn-primary btn-large" id="submitBtn" disabled>
+      Upload &amp; Analyze
+    </button>
+  </form>
+
+  <div class="expected-columns">
+    <h3>Expected columns (flexible — extra/missing columns are handled gracefully)</h3>
+    <div class="chip-row">
+      <span class="chip">EmployeeID</span>
+      <span class="chip">Name</span>
+      <span class="chip">Gender</span>
+      <span class="chip">Age</span>
+      <span class="chip">Department</span>
+      <span class="chip">JobRole</span>
+      <span class="chip">Experience</span>
+      <span class="chip">Salary</span>
+      <span class="chip">Attendance</span>
+      <span class="chip">PerformanceRating</span>
+      <span class="chip">Promoted</span>
+      <span class="chip">TrainingHours</span>
+      <span class="chip">Attrition</span>
+      <span class="chip">JoiningDate</span>
+    </div>
+  </div>
+</div>
+{% endblock %}

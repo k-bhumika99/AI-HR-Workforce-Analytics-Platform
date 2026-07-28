@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Performance — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>⭐ Performance Analysis</h1>
+    <p class="page-subtitle">Performance rating distribution and top-performing departments &amp; employees</p>
+  </div>
+</div>
+
+{% include "partials/filter_bar.html" %}
+
+<div class="stat-row">
+  <div class="stat-pill">⭐ Average Rating: <strong>{{ performance.get('average_performance', 'N/A') }}</strong></div>
+</div>
+
+<section class="module-section">
+  <h2>📊 Rating Distribution &amp; Top Departments</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-performance_hist"></div>
+    <div class="chart-card" id="chart-top_dept_bar"></div>
+  </div>
+</section>
+
+{% if performance.highest_rated_employees %}
+<section class="module-section">
+  <h2>🏆 Highest Rated Employees</h2>
+  <div class="table-wrap">
+    <table class="data-table">
+      <thead>
+        <tr>
+          {% for col in performance.highest_rated_employees[0].keys() %}<th>{{ col }}</th>{% endfor %}
+        </tr>
+      </thead>
+      <tbody>
+        {% for row in performance.highest_rated_employees %}
+        <tr>
+          {% for col, val in row.items() %}<td>{{ val }}</td>{% endfor %}
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endif %}
+
+{% endblock %}
+
+{% block scripts %}
+<script type="application/json" id="charts-data">
+{
+  {% set comma = joiner(",") %}
+  {% for key, json_str in charts.items() %}
+    {% if json_str %}
+      {{ comma() }}
+      "{{ key }}": {{ json_str | safe }}
+    {% endif %}
+  {% endfor %}
+}
+</script>
+<script>
+const chartsDataEl = document.getElementById("charts-data");
+if (chartsDataEl) {
+  const CHARTS = JSON.parse(chartsDataEl.textContent);
+  Object.keys(CHARTS).forEach(function(key) {
+    const el = document.getElementById("chart-" + key);
+    if (el) Plotly.newPlot(el, CHARTS[key].data, CHARTS[key].layout, {responsive: true, displaylogo: false});
+  });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block title %}Attrition — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>🚪 Historical Attrition Analysis <span class="badge">📜 Historical data only — no predictions</span></h1>
+    <p class="page-subtitle">Descriptive breakdown of past attrition by department, gender, salary &amp; experience</p>
+  </div>
+</div>
+
+{% include "partials/filter_bar.html" %}
+
+<div class="stat-row">
+  <div class="stat-pill">🚪 Attrition Rate: <strong>{{ attrition.get('overall_attrition_rate', 'N/A') }}%</strong></div>
+  <div class="stat-pill">👋 Left: <strong>{{ attrition.get('total_left', 0) }}</strong></div>
+  <div class="stat-pill">✅ Stayed: <strong>{{ attrition.get('total_stayed', 0) }}</strong></div>
+</div>
+
+<section class="module-section">
+  <h2>📊 Attrition Split &amp; by Department</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-attrition_pie"></div>
+    <div class="chart-card" id="chart-attrition_dept_bar"></div>
+  </div>
+</section>
+
+<section class="module-section">
+  <h2>🚻 By Gender &amp; 💰 Salary Band</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-attrition_gender_bar"></div>
+    <div class="chart-card" id="chart-attrition_salary_bar"></div>
+  </div>
+</section>
+
+<section class="module-section">
+  <h2>📆 By Experience Band</h2>
+  <div class="chart-grid">
+    <div class="chart-card chart-wide" id="chart-attrition_exp_bar"></div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="application/json" id="charts-data">
+{
+  {% set comma = joiner(",") %}
+  {% for key, json_str in charts.items() %}
+    {% if json_str %}
+      {{ comma() }}
+      "{{ key }}": {{ json_str | safe }}
+    {% endif %}
+  {% endfor %}
+}
+</script>
+<script>
+const chartsDataEl = document.getElementById("charts-data");
+if (chartsDataEl) {
+  const CHARTS = JSON.parse(chartsDataEl.textContent);
+  Object.keys(CHARTS).forEach(function(key) {
+    const el = document.getElementById("chart-" + key);
+    if (el) Plotly.newPlot(el, CHARTS[key].data, CHARTS[key].layout, {responsive: true, displaylogo: false});
+  });
+}
+</script>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+{% block title %}Attendance — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>🗓️ Attendance Analysis</h1>
+    <p class="page-subtitle">Average, highest &amp; lowest attendance across your workforce</p>
+  </div>
+</div>
+
+{% include "partials/filter_bar.html" %}
+
+<div class="stat-row">
+  <div class="stat-pill">📈 Highest: <strong>{{ attendance.get('highest_attendance', 'N/A') }}%</strong></div>
+  <div class="stat-pill">📉 Lowest: <strong>{{ attendance.get('lowest_attendance', 'N/A') }}%</strong></div>
+  <div class="stat-pill">📊 Average: <strong>{{ attendance.get('average_attendance', 'N/A') }}%</strong></div>
+</div>
+
+<section class="module-section">
+  <h2>🏢 Attendance by Department</h2>
+  <div class="chart-grid">
+    <div class="chart-card chart-wide" id="chart-attendance_bar"></div>
+  </div>
+</section>
+
+<section class="module-section">
+  <h2>📊 Attendance Distribution</h2>
+  <div class="chart-grid">
+    <div class="chart-card chart-wide" id="chart-attendance_hist"></div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="application/json" id="charts-data">
+{
+  {% set comma = joiner(",") %}
+  {% for key, json_str in charts.items() %}
+    {% if json_str %}
+      {{ comma() }}
+      "{{ key }}": {{ json_str | safe }}
+    {% endif %}
+  {% endfor %}
+}
+</script>
+<script>
+const chartsDataEl = document.getElementById("charts-data");
+if (chartsDataEl) {
+  const CHARTS = JSON.parse(chartsDataEl.textContent);
+  Object.keys(CHARTS).forEach(function(key) {
+    const el = document.getElementById("chart-" + key);
+    if (el) Plotly.newPlot(el, CHARTS[key].data, CHARTS[key].layout, {responsive: true, displaylogo: false});
+  });
+}
+</script>
+{% endblock %}

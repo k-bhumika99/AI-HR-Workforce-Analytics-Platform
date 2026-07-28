@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% block title %}Demographics — HR Workforce Analytics{% endblock %}
+
+{% block content %}
+<div class="page-header">
+  <div>
+    <h1>👥 Employee Demographics</h1>
+    <p class="page-subtitle">Gender, age, department, job role &amp; experience breakdown across {{ total }} employees</p>
+  </div>
+</div>
+
+{% include "partials/filter_bar.html" %}
+
+{% if demo.age_stats %}
+<div class="stat-row">
+  <div class="stat-pill">👶 Youngest: <strong>{{ demo.age_stats.min | int }}</strong></div>
+  <div class="stat-pill">🧓 Oldest: <strong>{{ demo.age_stats.max | int }}</strong></div>
+  <div class="stat-pill">📊 Average Age: <strong>{{ demo.age_stats.mean }}</strong></div>
+</div>
+{% endif %}
+
+<section class="module-section">
+  <h2>🚻 Gender &amp; Department Mix</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-gender_pie"></div>
+    <div class="chart-card" id="chart-dept_bar"></div>
+  </div>
+</section>
+
+<section class="module-section">
+  <h2>🎂 Age Breakdown</h2>
+  <div class="chart-grid">
+    <div class="chart-card" id="chart-age_hist"></div>
+    <div class="chart-card" id="chart-age_group_bar"></div>
+  </div>
+</section>
+
+<section class="module-section">
+  <h2>💼 Roles &amp; Experience</h2>
+  <div class="chart-grid">
+    <div class="chart-card chart-wide" id="chart-role_bar"></div>
+    <div class="chart-card chart-wide" id="chart-experience_bar"></div>
+  </div>
+</section>
+
+{% endblock %}
+
+{% block scripts %}
+<script type="application/json" id="charts-data">
+{
+  {% set comma = joiner(",") %}
+  {% for key, json_str in charts.items() %}
+    {% if json_str %}
+      {{ comma() }}
+      "{{ key }}": {{ json_str | safe }}
+    {% endif %}
+  {% endfor %}
+}
+</script>
+<script>
+const chartsDataEl = document.getElementById("charts-data");
+if (chartsDataEl) {
+  const CHARTS = JSON.parse(chartsDataEl.textContent);
+  Object.keys(CHARTS).forEach(function(key) {
+    const el = document.getElementById("chart-" + key);
+    if (el) Plotly.newPlot(el, CHARTS[key].data, CHARTS[key].layout, {responsive: true, displaylogo: false});
+  });
+}
+</script>
+{% endblock %}
